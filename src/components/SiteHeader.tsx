@@ -24,7 +24,7 @@ export function SiteHeader({
 
   return (
     <header className="sticky top-0 z-(--z-nav) border-b border-line bg-bg">
-      {variant === "topbar" && (
+      {variant === "topbar" && (phone || email) && (
         <div className="tone-dark bg-bg">
           <div className="container-site flex h-9 items-center justify-between gap-6 text-xs">
             {phone ? (
@@ -34,15 +34,15 @@ export function SiteHeader({
             ) : (
               <span />
             )}
-            <a href={`mailto:${email}`} className="truncate text-ink/85 hover:text-ink">
+            {email && <a href={`mailto:${email}`} className="truncate text-ink/85 hover:text-ink">
               {email}
-            </a>
+            </a>}
           </div>
         </div>
       )}
       <div className="container-site flex h-16 items-center justify-between gap-6">
         <Link href="/" className="min-w-0 lg:shrink-0">
-          <span className="type-display-sm block truncate text-base leading-none lg:overflow-visible">
+          <span className="block truncate text-lg font-bold tracking-tight text-primary sm:text-xl">
             {companyName}
           </span>
         </Link>

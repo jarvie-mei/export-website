@@ -36,7 +36,7 @@ export async function generateMetadata({
   const l = locale as Locale;
   const p = content.products.find((x) => x.id === id);
   if (!p) return {};
-  const specLine = p.specs
+  const specLine = (l === "zh" ? p.specs_zh ?? p.specs : p.specs)
     .slice(0, 3)
     .map(([k, v]) => `${k}: ${v}`)
     .join(" · ");
@@ -98,7 +98,7 @@ export default async function ProductPage({
 
   return (
     <>
-      <SiteHeader locale={l} path="/products" variant={(blueprint.chrome ?? themeDefaults.chrome).header} />
+      <SiteHeader locale={l} path={productHref(id)} variant={(blueprint.chrome ?? themeDefaults.chrome).header} />
       <main>
         <script
           type="application/ld+json"

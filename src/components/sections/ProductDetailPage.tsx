@@ -79,7 +79,7 @@ export function ProductDetailPage({
             <button
               type="button"
               popoverTarget="pdp-zoom"
-              className="relative block aspect-4/3 w-full cursor-zoom-in overflow-hidden border border-line bg-surface"
+              className="relative block aspect-square w-full cursor-zoom-in overflow-hidden border border-line bg-surface"
               aria-label={t("zoom")}
             >
               <Image
@@ -88,7 +88,7 @@ export function ProductDetailPage({
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
+                className="object-contain"
               />
             </button>
             <div
@@ -96,16 +96,24 @@ export function ProductDetailPage({
               popover="auto"
               className="m-auto w-[min(92vw,52rem)] border border-line bg-bg p-2 shadow-[0_8px_24px_oklch(0_0_0/0.18)] backdrop:bg-black/70"
             >
-              <div className="relative aspect-4/3 w-full">
+              <div className="relative aspect-square w-full">
                 <Image src={mainImage} alt={name} fill sizes="52rem" className="object-contain" />
               </div>
             </div>
 
             {thumbs.length > 0 && (
               <ul className="mt-4 grid grid-cols-4 gap-4">
-                {thumbs.slice(0, 4).map((src) => (
-                  <li key={src} className="relative aspect-4/3 overflow-hidden border border-line bg-surface">
-                    <Image src={src} alt="" fill sizes="12rem" className="object-cover" />
+                {thumbs.map((src, index) => (
+                  <li key={src}>
+                    <a href={src} className="relative block aspect-square cursor-zoom-in overflow-hidden border border-line bg-surface">
+                      <Image
+                        src={src}
+                        alt={t("imageView", { name, number: index + 2 })}
+                        fill
+                        sizes="(max-width: 640px) 24vw, 9rem"
+                        className="object-contain"
+                      />
+                    </a>
                   </li>
                 ))}
               </ul>

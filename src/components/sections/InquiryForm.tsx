@@ -1,5 +1,6 @@
 "use client";
 
+import siteConfig from "../../../site/site.json";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -11,7 +12,7 @@ export type { InquiryFormProps };
 type Status = "idle" | "sending" | "ok" | "error";
 
 const ENDPOINT = process.env.NEXT_PUBLIC_INQUIRY_ENDPOINT ?? "/api/inquiries";
-const SITE_ID = process.env.NEXT_PUBLIC_SITE_ID ?? "nextjs-export-starter";
+const SITE_ID = process.env.NEXT_PUBLIC_SITE_ID ?? siteConfig.site_id;
 
 const FIELD =
   "w-full rounded-sm border border-line bg-bg px-3.5 py-2.5 text-ink placeholder:text-muted/70 focus:border-primary";

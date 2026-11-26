@@ -5,19 +5,19 @@
     "getQuote": "Get a Quote"
   },
   "form": {
-    "defaultHeading": "Request a Quotation",
-    "defaultLead": "Send drawings, standards or quantities — our engineers reply within 24 hours.",
+    "defaultHeading": "Packaging inquiry",
+    "defaultLead": "Include the bag type, dimensions and order quantity. If you are unsure of the bag size, give the dimensions of the box or item it will hold.",
     "regarding": "Regarding",
     "name": "Your name",
     "email": "Work email",
     "country": "Country",
     "quantity": "Quantity",
-    "quantityHint": "e.g. 5,000 pcs",
+    "quantityHint": "e.g. 5,000 bags",
     "message": "Message",
     "sending": "Sending…",
     "submit": "Send Inquiry",
-    "ok": "Received. We will reply within 24 hours.",
-    "error": "Failed to send — please email us directly."
+    "ok": "Your inquiry has been submitted.",
+    "error": "Unable to submit your inquiry. Please try again later."
   },
   "contact": {
     "email": "Email",
@@ -32,7 +32,8 @@
     "specs": "Specifications",
     "zoom": "Zoom image",
     "requestQuote": "Request Quotation",
-    "whatsapp": "WhatsApp Us"
+    "whatsapp": "WhatsApp Us",
+    "imageView": "{name}, product image {number}"
   },
   "footer": {
     "sitemap": "Sitemap",
@@ -42,7 +43,7 @@
     "docNo": "REV {year} · ENGINEERED SUPPLY"
   },
   "sections": {
-    "productRange": "Product Range",
+    "productRange": "Our products",
     "hotProducts": "Popular Products",
     "categories": "Browse by Category",
     "certifications": "Certifications & Compliance",
@@ -50,15 +51,16 @@
     "howWeWork": "Production Process",
     "whyUs": "Why Choose Us",
     "buyersSay": "What Buyers Say",
-    "faqHeading": "Frequently Asked Questions",
+    "faqHeading": "Bag types and dimensions",
     "contactUs": "Contact Us",
-    "ctaHeadline": "Send your drawing. Get a quotation within 24 hours.",
+    "ctaHeadline": "Discuss bag sizes and pricing",
     "ctaButton": "Get a Quotation",
     "getQuote": "Get a Quote",
     "viewProducts": "View Products",
     "foundedLabel": "Founded",
     "employeesLabel": "Employees",
     "relatedProducts": "Related Products",
-    "catalogIntro": "{name} Product Catalogue"
+    "catalogIntro": "{name} Product Catalogue",
+    "collectionCaption": "Textured insulated bag · Marbled paper bags"
   }
 }

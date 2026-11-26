@@ -1,5 +1,5 @@
 {
-  "site_id": "sample-fastener",
-  "scheme": "signal",
-  "base_url": "https://nextjs-export-starter.example.com"
+  "site_id": "jiarong-packaging",
+  "scheme": "machine",
+  "base_url": "https://export-website-sooty.vercel.app"
 }

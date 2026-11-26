@@ -39,13 +39,13 @@ function ProductCard({ p, cardStyle }: { p: Product; cardStyle: "line" | "panel"
   if (cardStyle === "panel") {
     return (
       <Link href={p.href} className="group block bg-surface p-4 transition-colors duration-150 hover:bg-surface-2">
-        <div className="relative aspect-4/3 overflow-hidden bg-bg">
+        <div className="relative aspect-square overflow-hidden bg-bg">
           <Image
             src={p.image}
             alt={p.name}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]"
+            className="object-contain transition-transform duration-300 ease-out group-hover:scale-[1.03]"
           />
         </div>
         <div className="px-1 pt-4 pb-1 text-center">
@@ -61,13 +61,13 @@ function ProductCard({ p, cardStyle }: { p: Product; cardStyle: "line" | "panel"
       href={p.href}
       className="group block border border-line bg-bg transition-colors duration-150 hover:border-ink/40"
     >
-      <div className="relative aspect-4/3 overflow-hidden bg-surface">
+      <div className="relative aspect-square overflow-hidden bg-surface">
         <Image
           src={p.image}
           alt={p.name}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]"
+          className="object-contain transition-transform duration-300 ease-out group-hover:scale-[1.03]"
         />
       </div>
       <div className="flex items-baseline justify-between gap-3 border-t border-line px-4 py-3.5">

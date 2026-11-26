@@ -6,8 +6,8 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export const contactBlockSchema = z.object({
   heading: z.string().optional(),
-  whatsapp: z.string(),
-  email: z.string(),
+  whatsapp: z.string().optional(),
+  email: z.string().optional(),
   phone: z.string().optional(),
   address: z.string(),
   mapImage: z.string().optional(), // 地图用静态图（性能），不用 iframe
@@ -24,16 +24,16 @@ export function ContactBlock({
   mapImage,
 }: ContactBlockProps) {
   const t = useTranslations("contact");
-  const waNumber = whatsapp.replace(/[^\d]/g, "");
+  const waNumber = whatsapp?.replace(/[^\d]/g, "");
 
   const rows: Array<{ icon: string; label: string; value: string; href: string }> = [
-    {
+    ...(waNumber ? [{
       icon: "whatsapp",
       label: "WhatsApp",
       value: `+${waNumber}`,
       href: `https://wa.me/${waNumber}`,
-    },
-    { icon: "mail", label: t("email"), value: email, href: `mailto:${email}` },
+    }] : []),
+    ...(email ? [{ icon: "mail", label: t("email"), value: email, href: `mailto:${email}` }] : []),
     ...(phone
       ? [{ icon: "phone", label: t("phone"), value: phone, href: `tel:${phone.replace(/\s/g, "")}` }]
       : []),
@@ -68,13 +68,13 @@ export function ContactBlock({
                 </a>
               </li>
             ))}
-            <li className="flex items-start gap-5 border-b border-line py-5">
+            {address && <li className="flex items-start gap-5 border-b border-line py-5">
               <Icon name="pin" className="mt-0.5 size-6 shrink-0 text-primary" />
               <div>
                 <p className="type-label text-muted">{t("address")}</p>
                 <address className="font-semibold not-italic text-ink">{address}</address>
               </div>
-            </li>
+            </li>}
           </ul>
         </div>
 

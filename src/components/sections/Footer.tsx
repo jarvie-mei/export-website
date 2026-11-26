@@ -8,7 +8,7 @@ export const footerSchema = z.object({
   companyName: z.string(),
   tagline: z.string().optional(),
   nav: z.array(z.object({ label: z.string(), href: z.string() })),
-  email: z.string(),
+  email: z.string().optional(),
   whatsapp: z.string().optional(),
   address: z.string().optional(),
   certs: z.array(z.string()).default([]),
@@ -33,7 +33,7 @@ export function Footer({
     return (
       <footer data-section="footer" className="tone-dark bg-bg">
         <div className="container-site section-pad-tight">
-          <div className="grid grid-cols-1 gap-x-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-x-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_auto]">
             <div>
               <p className="text-lg font-bold text-ink">{companyName}</p>
               {tagline && <p className="mt-3 text-sm text-muted">{tagline}</p>}
@@ -50,14 +50,14 @@ export function Footer({
                 ))}
               </ul>
             </nav>
-            <div>
+            {(email || whatsapp || address) && <div>
               <p className="type-label mb-4 text-muted">{t("contact")}</p>
               <ul className="space-y-2 text-sm">
-                <li>
+                {email && <li>
                   <a href={`mailto:${email}`} className="text-ink/90 hover:text-primary-bright">
                     {email}
                   </a>
-                </li>
+                </li>}
                 {whatsapp && (
                   <li>
                     <a
@@ -72,8 +72,8 @@ export function Footer({
                 )}
                 {address && <li className="text-muted">{address}</li>}
               </ul>
-            </div>
-            <div>
+            </div>}
+            {certs.length > 0 && <div>
               <p className="type-label mb-4 text-muted">{t("compliance")}</p>
               <ul className="flex flex-wrap gap-2">
                 {certs.map((c) => (
@@ -82,7 +82,7 @@ export function Footer({
                   </li>
                 ))}
               </ul>
-            </div>
+            </div>}
           </div>
           <div className="mt-10 border-t border-line pt-5">
             <p className="text-xs text-muted">
@@ -119,11 +119,11 @@ export function Footer({
           <div className="border-b border-line p-7 sm:border-b-0 lg:border-l">
             <p className="type-label mb-4 text-muted">{t("contact")}</p>
             <ul className="space-y-2 text-sm">
-              <li>
+              {email && <li>
                 <a href={`mailto:${email}`} className="text-ink/90 hover:text-primary-bright">
                   {email}
                 </a>
-              </li>
+              </li>}
               {whatsapp && (
                 <li>
                   <a

@@ -1,345 +1,1413 @@
 {
   "version": 1,
   "company": {
-    "name_en": "Haiwei Fastener (Ningbo) Co., Ltd.",
-    "name_zh": "宁波海威紧固件有限公司",
-    "short_name_en": "HAIWEI FASTENER",
-    "short_name_zh": "海威紧固件",
-    "tagline_en": "High-strength nuts, bolts and threaded rods — M6 to M64, made to standard since 2008.",
-    "tagline_zh": "高强度螺母、螺栓与螺纹杆——M6 至 M64，按标准制造，始于 2008。",
-    "founded": 2008,
-    "employees": "120+",
-    "about_en": "Haiwei Fastener manufactures high-strength nuts, bolts and threaded rods at a 15,000 m² plant in Ningbo, 40 minutes from Ningbo-Zhoushan port. Founded in 2008, we run 32 cold-forging and thread-rolling lines with an annual capacity of 8,000 tons, producing to ISO, DIN, ASTM, GB and EN standards in property classes 8 to 12.9. Every batch ships with mill certificates and full dimensional inspection reports. Our fasteners are used in structural steel, rail, wind power and machinery projects across 40+ countries in Europe, the Americas, the Middle East and Southeast Asia.",
-    "about_zh": "宁波海威紧固件有限公司位于宁波，厂区面积 15,000 平方米，距宁波舟山港 40 分钟车程。公司成立于 2008 年，拥有冷镦与搓丝产线 32 条，年产能 8,000 吨，按 ISO、DIN、ASTM、GB、EN 标准生产 8 级至 12.9 级高强度紧固件。每批次随附材质证明与全尺寸检验报告。产品应用于钢结构、轨道、风电与机械项目，出口欧洲、美洲、中东与东南亚 40 多个国家。",
-    "whatsapp": "+86 138 5741 0000",
-    "email": "sales@haiwei-fastener.com",
-    "phone": "+86 574 8811 0000",
-    "address_en": "No. 58 Zhenhai Industrial Zone, Ningbo, Zhejiang, China 315200",
-    "address_zh": "浙江省宁波市镇海工业区 58 号，315200",
-    "map_image": "map.jpg"
+    "name_en": "Zhejiang Jiarong Packaging Co., Ltd.",
+    "name_zh": "浙江佳荣包装股份有限公司",
+    "short_name_en": "JIARONG PACKAGING",
+    "short_name_zh": "佳荣包装",
+    "tagline_en": "Insulated takeaway bags and paper bags without a horizontal fold.",
+    "tagline_zh": "主营外卖保温袋、无腰线纸袋。",
+    "about_en": "Zhejiang Jiarong Packaging Co., Ltd. supplies insulated takeaway bags for meal deliveries and paper bags without a horizontal fold for takeout and retail purchases. When choosing a bag, start with the size of the packed contents. For stacked meal boxes, measure the full stack with the lids in place.",
+    "about_zh": "浙江佳荣包装股份有限公司主营外卖保温袋和无腰线纸袋。外卖保温袋用于餐食配送，无腰线纸袋用于外带餐品和门店商品的提装。选袋时，可先测量装入物的长、宽、高；多层餐盒请按加盖后叠放的总高度测量。"
   },
   "hero": {
-    "headline_en": "High-Strength Fasteners, Engineered to Standard",
-    "headline_zh": "高强度紧固件，按标准制造",
-    "subline_en": "ISO · DIN · ASTM nuts, bolts and threaded rods from M6 to M64. 8,000 t annual capacity, salt-spray tested, delivered to 40+ countries.",
-    "subline_zh": "ISO · DIN · ASTM 标准螺母、螺栓与螺纹杆，规格 M6–M64。年产能 8,000 吨，盐雾测试验证，出口 40 多个国家。",
-    "image": "hero.jpg",
-    "badges": ["ISO 9001:2015", "SINCE 2008", "CLASS 8.8–12.9", "PED 2014/68/EU"]
+    "headline_en": "Insulated takeaway bags\n& paper bags",
+    "headline_zh": "外卖保温袋\n无腰线纸袋",
+    "subline_en": "Thermal carriers for meal deliveries. Paper bags with an uninterrupted front panel for takeout and retail.",
+    "subline_zh": "餐食配送用保温袋，门店外带用无腰线纸袋。按装载尺寸、使用场景和采购数量选袋。",
+    "image": "bags/collection.webp"
   },
-  "stats": [
-    { "label_en": "Years Exporting", "label_zh": "出口年限", "value": "18" },
-    { "label_en": "Countries Served", "label_zh": "出口国家", "value": "40+" },
-    { "label_en": "Annual Capacity (t)", "label_zh": "年产能（吨）", "value": "8,000" },
-    { "label_en": "Production Lines", "label_zh": "生产线", "value": "32" }
-  ],
   "categories": [
     {
-      "id": "hex-nuts",
-      "name_en": "Hex Nuts",
-      "name_zh": "六角螺母",
-      "children": [
-        { "id": "iso-4032", "name_en": "ISO 4032", "name_zh": "ISO 4032" },
-        { "id": "din-934", "name_en": "DIN 934", "name_zh": "DIN 934" },
-        { "id": "gb-6170", "name_en": "GB 6170", "name_zh": "GB 6170" }
-      ]
+      "id": "insulated-bags",
+      "name_zh": "外卖保温袋",
+      "name_en": "Insulated Takeaway Bags"
     },
     {
-      "id": "flange-nuts",
-      "name_en": "Flange Nuts",
-      "name_zh": "法兰螺母",
-      "children": [
-        { "id": "din-6923", "name_en": "DIN 6923", "name_zh": "DIN 6923" },
-        { "id": "iso-4161", "name_en": "ISO 4161", "name_zh": "ISO 4161" }
-      ]
+      "id": "paper-bags",
+      "name_zh": "纸质手提袋",
+      "name_en": "Paper Carrier Bags"
     },
     {
-      "id": "lock-nuts",
-      "name_en": "Lock Nuts",
-      "name_zh": "锁紧螺母",
-      "children": [
-        { "id": "din-985", "name_en": "DIN 985 Nylon Insert", "name_zh": "DIN 985 尼龙锁紧" },
-        { "id": "din-980", "name_en": "DIN 980 All-Metal", "name_zh": "DIN 980 全金属" }
-      ]
+      "id": "gift-bags",
+      "name_zh": "礼品包装袋",
+      "name_en": "Gift Bags"
     },
     {
-      "id": "hex-bolts",
-      "name_en": "Hex Bolts",
-      "name_zh": "六角螺栓",
-      "children": [
-        { "id": "din-933", "name_en": "DIN 933", "name_zh": "DIN 933" },
-        { "id": "iso-4014", "name_en": "ISO 4014", "name_zh": "ISO 4014" },
-        { "id": "astm-a325", "name_en": "ASTM A325", "name_zh": "ASTM A325" }
-      ]
-    },
-    {
-      "id": "structural-bolts",
-      "name_en": "Structural Bolt Sets",
-      "name_zh": "钢结构螺栓组",
-      "children": [
-        { "id": "en-14399", "name_en": "EN 14399-4 HV", "name_zh": "EN 14399-4 HV" },
-        { "id": "gb-1228", "name_en": "GB/T 1228", "name_zh": "GB/T 1228" }
-      ]
-    },
-    {
-      "id": "threaded-rods",
-      "name_en": "Threaded Rods",
-      "name_zh": "螺纹杆",
-      "children": [
-        { "id": "din-975", "name_en": "DIN 975", "name_zh": "DIN 975" },
-        { "id": "astm-a193", "name_en": "ASTM A193 B7", "name_zh": "ASTM A193 B7" }
-      ]
+      "id": "shopping-bags",
+      "name_zh": "购物手提袋",
+      "name_en": "Shopping Totes"
     }
   ],
   "products": [
     {
-      "id": "hn-iso4032-cl8",
-      "category": "hex-nuts",
-      "name_en": "Hex Nut ISO 4032, Class 8",
-      "name_zh": "六角螺母 ISO 4032，8 级",
-      "model": "ISO 4032",
+      "id": "insulated-takeaway-bag",
+      "category": "insulated-bags",
+      "name_en": "Insulated Takeaway Bag",
+      "name_zh": "外卖保温袋",
       "specs": [
-        ["Standard", "ISO 4032 / DIN 934"],
-        ["Size range", "M6 – M64"],
-        ["Property class", "8 / 10"],
-        ["Material", "Medium carbon steel"],
-        ["Finish", "Plain / Zinc plated / HDG"],
-        ["Thread", "Metric coarse, 6H"]
+        [
+          "Use",
+          "Carrying packed meals during delivery"
+        ],
+        [
+          "Sizing",
+          "Measure the largest meal box and the height of the loaded stack"
+        ],
+        [
+          "Thermal requirements",
+          "Specify the expected time between packing and delivery"
+        ]
       ],
       "specs_zh": [
-        ["标准", "ISO 4032 / DIN 934"],
-        ["规格范围", "M6 – M64"],
-        ["性能等级", "8 / 10"],
-        ["材质", "中碳钢"],
-        ["表面处理", "本色 / 镀锌 / 热浸镀锌"],
-        ["螺纹", "公制粗牙 6H"]
+        [
+          "使用场景",
+          "外卖餐食配送"
+        ],
+        [
+          "尺寸选择",
+          "按最大餐盒的长、宽和叠放总高度选袋"
+        ],
+        [
+          "保温需求",
+          "询价时请注明从打包到送达的预计时长"
+        ]
       ],
-      "images": ["product-01.jpg"],
-      "moq": "1,000 pcs"
+      "images": [
+        "bags/insulated-bags/insulated-takeaway-bag/cover.webp",
+        "bags/insulated-bags/insulated-takeaway-bag/view-2.webp",
+        "bags/insulated-bags/insulated-takeaway-bag/view-3.webp"
+      ]
     },
     {
-      "id": "hn-din934-ss304",
-      "category": "hex-nuts",
-      "name_en": "Hex Nut DIN 934, Stainless A2",
-      "name_zh": "六角螺母 DIN 934，不锈钢 A2",
-      "model": "DIN 934",
+      "id": "paper-bag-without-horizontal-fold",
+      "category": "paper-bags",
+      "name_en": "Paper Bag Without a Horizontal Fold",
+      "name_zh": "无腰线纸袋",
       "specs": [
-        ["Standard", "DIN 934"],
-        ["Size range", "M4 – M36"],
-        ["Material", "SS304 (A2-70)"],
-        ["Corrosion test", "Salt-spray 500 h"],
-        ["Thread", "Metric coarse, 6H"]
+        [
+          "Bag design",
+          "Front panel without a horizontal fold across the middle"
+        ],
+        [
+          "Use",
+          "Carrying takeaway orders and retail purchases"
+        ],
+        [
+          "Sizing",
+          "Specify bag width, side depth and height, or the dimensions of the contents"
+        ]
       ],
       "specs_zh": [
-        ["标准", "DIN 934"],
-        ["规格范围", "M4 – M36"],
-        ["材质", "SS304（A2-70）"],
-        ["耐蚀测试", "盐雾 500 小时"],
-        ["螺纹", "公制粗牙 6H"]
+        [
+          "袋型特点",
+          "袋身中部无横向腰线，正面保持完整"
+        ],
+        [
+          "使用场景",
+          "门店外带餐品、零售商品提装"
+        ],
+        [
+          "尺寸选择",
+          "请提供袋宽、侧宽、袋高，或装入物的长、宽、高"
+        ]
       ],
-      "images": ["product-02.jpg"],
-      "moq": "1,000 pcs"
+      "images": [
+        "bags/paper-bags/paper-bag-without-horizontal-fold/cover.webp",
+        "bags/paper-bags/paper-bag-without-horizontal-fold/view-2.webp"
+      ]
     },
     {
-      "id": "hn-gb6170-cl10",
-      "category": "hex-nuts",
-      "name_en": "Hex Nut GB 6170, Class 10",
-      "name_zh": "六角螺母 GB 6170，10 级",
-      "model": "GB 6170",
+      "id": "leaf-green",
+      "category": "insulated-bags",
+      "name_en": "Leaf Green Insulated Bag",
+      "name_zh": "绿野清风保温袋",
       "specs": [
-        ["Standard", "GB/T 6170"],
-        ["Size range", "M8 – M48"],
-        ["Property class", "10"],
-        ["Material", "Medium carbon alloy steel"],
-        ["Finish", "Black oxide / Zinc plated"]
+        [
+          "Product group",
+          "Insulated Takeaway Bags"
+        ],
+        [
+          "Appearance",
+          "Pale green with dark handles"
+        ]
       ],
-      "images": ["product-03.jpg"],
-      "moq": "2,000 pcs"
+      "specs_zh": [
+        [
+          "产品类别",
+          "外卖保温袋"
+        ],
+        [
+          "外观",
+          "浅绿色袋身、深色提手"
+        ]
+      ],
+      "images": [
+        "bags/insulated-bags/leaf-green/cover.webp",
+        "bags/insulated-bags/leaf-green/view-2.webp",
+        "bags/insulated-bags/leaf-green/view-3.webp"
+      ]
     },
     {
-      "id": "fn-din6923-cl8",
-      "category": "flange-nuts",
-      "name_en": "Serrated Flange Nut DIN 6923",
-      "name_zh": "带齿法兰螺母 DIN 6923",
-      "model": "DIN 6923",
+      "id": "green-texture",
+      "category": "insulated-bags",
+      "name_en": "Textured Green Insulated Bag",
+      "name_zh": "绿色纸纹保温袋",
       "specs": [
-        ["Standard", "DIN 6923 / ISO 4161"],
-        ["Size range", "M5 – M20"],
-        ["Property class", "8 / 10"],
-        ["Serration", "Anti-loosening, 90°"],
-        ["Finish", "Zinc plated / Dacromet"]
+        [
+          "Product group",
+          "Insulated Takeaway Bags"
+        ],
+        [
+          "Appearance",
+          "Textured green with black handles"
+        ]
       ],
-      "images": ["product-04.jpg"],
-      "moq": "5,000 pcs"
+      "specs_zh": [
+        [
+          "产品类别",
+          "外卖保温袋"
+        ],
+        [
+          "外观",
+          "草绿色纹理、黑色提手"
+        ]
+      ],
+      "images": [
+        "bags/insulated-bags/green-texture/cover.webp",
+        "bags/insulated-bags/green-texture/view-2.webp",
+        "bags/insulated-bags/green-texture/view-3.webp"
+      ]
     },
     {
-      "id": "ln-din985-nylon",
-      "category": "lock-nuts",
-      "name_en": "Nylon Insert Lock Nut DIN 985",
-      "name_zh": "尼龙锁紧螺母 DIN 985",
-      "model": "DIN 985",
+      "id": "sea-salt-blue",
+      "category": "insulated-bags",
+      "name_en": "Sea Salt Blue Insulated Bag",
+      "name_zh": "海盐蓝保温袋",
       "specs": [
-        ["Standard", "DIN 985"],
-        ["Size range", "M3 – M36"],
-        ["Property class", "8 / 10"],
-        ["Insert", "PA66 nylon, -40 °C to +120 °C"],
-        ["Prevailing torque", "Per ISO 2320"]
+        [
+          "Product group",
+          "Insulated Takeaway Bags"
+        ],
+        [
+          "Appearance",
+          "Light blue with matching handles"
+        ]
       ],
-      "images": ["product-05.jpg"],
-      "moq": "5,000 pcs"
+      "specs_zh": [
+        [
+          "产品类别",
+          "外卖保温袋"
+        ],
+        [
+          "外观",
+          "浅蓝色、同色提手"
+        ]
+      ],
+      "images": [
+        "bags/insulated-bags/sea-salt-blue/cover.webp",
+        "bags/insulated-bags/sea-salt-blue/view-2.webp"
+      ]
     },
     {
-      "id": "ln-din980-metal",
-      "category": "lock-nuts",
-      "name_en": "All-Metal Lock Nut DIN 980",
-      "name_zh": "全金属锁紧螺母 DIN 980",
-      "model": "DIN 980V",
+      "id": "sweet",
+      "category": "insulated-bags",
+      "name_en": "Sweet Green Insulated Bag",
+      "name_zh": "Sweet 绿款保温袋",
       "specs": [
-        ["Standard", "DIN 980V"],
-        ["Size range", "M6 – M30"],
-        ["Property class", "10"],
-        ["Temperature", "Up to 300 °C"],
-        ["Finish", "Zinc flake coating"]
+        [
+          "Product group",
+          "Insulated Takeaway Bags"
+        ],
+        [
+          "Appearance",
+          "Pale green with a rectangular wordmark"
+        ]
       ],
-      "images": ["product-06.jpg"],
-      "moq": "3,000 pcs"
+      "specs_zh": [
+        [
+          "产品类别",
+          "外卖保温袋"
+        ],
+        [
+          "外观",
+          "浅绿底、方框字样"
+        ]
+      ],
+      "images": [
+        "bags/insulated-bags/sweet/cover.webp",
+        "bags/insulated-bags/sweet/view-2.webp"
+      ]
     },
     {
-      "id": "hb-din933-88",
-      "category": "hex-bolts",
-      "name_en": "Hex Bolt DIN 933, Grade 8.8",
-      "name_zh": "六角螺栓 DIN 933，8.8 级",
-      "model": "DIN 933",
+      "id": "nice-day",
+      "category": "insulated-bags",
+      "name_en": "Dark Handle Insulated Bag",
+      "name_zh": "深色提手保温袋",
       "specs": [
-        ["Standard", "DIN 933 / ISO 4017"],
-        ["Size range", "M6 – M48 × 300"],
-        ["Property class", "8.8"],
-        ["Material", "Medium carbon steel, quenched & tempered"],
-        ["Finish", "Plain / Zinc / HDG"],
-        ["Full thread", "Yes"]
+        [
+          "Product group",
+          "Insulated Takeaway Bags"
+        ],
+        [
+          "Appearance",
+          "Light body with contrasting dark handles"
+        ]
       ],
-      "images": ["product-07.jpg"],
-      "moq": "1,000 pcs"
+      "specs_zh": [
+        [
+          "产品类别",
+          "外卖保温袋"
+        ],
+        [
+          "外观",
+          "浅色袋身、深色提手"
+        ]
+      ],
+      "images": [
+        "bags/insulated-bags/nice-day/cover.webp",
+        "bags/insulated-bags/nice-day/view-2.webp",
+        "bags/insulated-bags/nice-day/view-3.webp"
+      ]
     },
     {
-      "id": "hb-iso4014-109",
-      "category": "hex-bolts",
-      "name_en": "Hex Bolt ISO 4014, Grade 10.9",
-      "name_zh": "六角螺栓 ISO 4014，10.9 级",
-      "model": "ISO 4014",
+      "id": "nice-bear",
+      "category": "insulated-bags",
+      "name_en": "Bear Print Insulated Bag",
+      "name_zh": "小熊图案保温袋",
       "specs": [
-        ["Standard", "ISO 4014"],
-        ["Size range", "M8 – M42 × 400"],
-        ["Property class", "10.9"],
-        ["Heat treatment", "Quenched & tempered"],
-        ["Hardness", "32 – 39 HRC"],
-        ["Partial thread", "Yes"]
+        [
+          "Product group",
+          "Insulated Takeaway Bags"
+        ],
+        [
+          "Appearance",
+          "Light background with a bear print"
+        ]
       ],
-      "images": ["product-08.jpg"],
-      "moq": "1,000 pcs"
+      "specs_zh": [
+        [
+          "产品类别",
+          "外卖保温袋"
+        ],
+        [
+          "外观",
+          "浅色底、小熊图案"
+        ]
+      ],
+      "images": [
+        "bags/insulated-bags/nice-bear/cover.webp",
+        "bags/insulated-bags/nice-bear/view-2.webp"
+      ]
     },
     {
-      "id": "hb-astm-a325",
-      "category": "hex-bolts",
-      "name_en": "Heavy Hex Structural Bolt ASTM A325",
-      "name_zh": "重型六角结构螺栓 ASTM A325",
-      "model": "ASTM A325",
+      "id": "dots",
+      "category": "insulated-bags",
+      "name_en": "Polka Dot Insulated Bag",
+      "name_zh": "圆点保温袋",
       "specs": [
-        ["Standard", "ASTM A325 Type 1"],
-        ["Size range", "1/2\" – 1-1/2\""],
-        ["Tensile strength", "≥ 120 ksi"],
-        ["Material", "Medium carbon steel"],
-        ["Finish", "Plain / HDG"]
+        [
+          "Product group",
+          "Insulated Takeaway Bags"
+        ],
+        [
+          "Appearance",
+          "Mint green with dark dots"
+        ]
       ],
-      "images": ["product-09.jpg"],
-      "moq": "500 pcs"
+      "specs_zh": [
+        [
+          "产品类别",
+          "外卖保温袋"
+        ],
+        [
+          "外观",
+          "薄荷绿底、深色圆点"
+        ]
+      ],
+      "images": [
+        "bags/insulated-bags/dots/cover.webp",
+        "bags/insulated-bags/dots/view-2.webp"
+      ]
     },
     {
-      "id": "sb-en14399-hv",
-      "category": "structural-bolts",
-      "name_en": "HV Bolt Set EN 14399-4",
-      "name_zh": "HV 钢结构螺栓组 EN 14399-4",
-      "model": "EN 14399-4",
+      "id": "warm-sweets",
+      "category": "insulated-bags",
+      "name_en": "Warm Sweets Insulated Bag",
+      "name_zh": "暖甜小铺保温袋",
       "specs": [
-        ["Standard", "EN 14399-4 (bolt + nut + washer)"],
-        ["Size range", "M12 – M36"],
-        ["Property class", "10.9 / 10"],
-        ["CE marking", "PED 2014/68/EU"],
-        ["K-class", "K1"],
-        ["Finish", "HDG 55 µm"]
+        [
+          "Product group",
+          "Insulated Takeaway Bags"
+        ],
+        [
+          "Appearance",
+          "Purple with white lettering"
+        ]
       ],
-      "images": ["product-10.jpg"],
-      "moq": "500 sets"
+      "specs_zh": [
+        [
+          "产品类别",
+          "外卖保温袋"
+        ],
+        [
+          "外观",
+          "紫色袋身、白色字样"
+        ]
+      ],
+      "images": [
+        "bags/insulated-bags/warm-sweets/cover.webp",
+        "bags/insulated-bags/warm-sweets/view-2.webp"
+      ]
     },
     {
-      "id": "sb-gb1228",
-      "category": "structural-bolts",
-      "name_en": "High-Strength Bolt Set GB/T 1228",
-      "name_zh": "高强度螺栓组 GB/T 1228",
-      "model": "GB/T 1228",
+      "id": "floral",
+      "category": "insulated-bags",
+      "name_en": "Floral Insulated Bag",
+      "name_zh": "朝花夕拾保温袋",
       "specs": [
-        ["Standard", "GB/T 1228 – 1231"],
-        ["Size range", "M16 – M30"],
-        ["Property class", "10.9S"],
-        ["Torque coefficient", "0.110 – 0.150"],
-        ["Application", "Steel structure connections"]
+        [
+          "Product group",
+          "Insulated Takeaway Bags"
+        ],
+        [
+          "Appearance",
+          "Floral print with light handles"
+        ]
       ],
-      "images": ["product-11.jpg"],
-      "moq": "500 sets"
+      "specs_zh": [
+        [
+          "产品类别",
+          "外卖保温袋"
+        ],
+        [
+          "外观",
+          "花卉印花、浅色提手"
+        ]
+      ],
+      "images": [
+        "bags/insulated-bags/floral/cover.webp",
+        "bags/insulated-bags/floral/view-2.webp"
+      ]
     },
     {
-      "id": "tr-din975-b7",
-      "category": "threaded-rods",
-      "name_en": "Threaded Rod DIN 975 / ASTM A193 B7",
-      "name_zh": "螺纹杆 DIN 975 / ASTM A193 B7",
-      "model": "DIN 975",
+      "id": "bbq-yellow",
+      "category": "insulated-bags",
+      "name_en": "Yellow Barbecue Bag",
+      "name_zh": "三五好友烧烤袋",
       "specs": [
-        ["Standard", "DIN 975 / ASTM A193 B7"],
-        ["Size range", "M6 – M64 × 1000/2000/3000 mm"],
-        ["Material", "42CrMo4 / B7 alloy steel"],
-        ["Tensile strength", "≥ 860 MPa"],
-        ["Finish", "Plain / Zinc / PTFE coated"]
+        [
+          "Product group",
+          "Insulated Takeaway Bags"
+        ],
+        [
+          "Appearance",
+          "Yellow with black handles"
+        ]
       ],
-      "images": ["product-12.jpg"],
-      "moq": "200 pcs"
+      "specs_zh": [
+        [
+          "产品类别",
+          "外卖保温袋"
+        ],
+        [
+          "外观",
+          "黄底、黑色提手"
+        ]
+      ],
+      "images": [
+        "bags/insulated-bags/bbq-yellow/cover.webp",
+        "bags/insulated-bags/bbq-yellow/view-2.webp",
+        "bags/insulated-bags/bbq-yellow/view-3.webp"
+      ]
+    },
+    {
+      "id": "bbq-print",
+      "category": "insulated-bags",
+      "name_en": "Barbecue Lettering Insulated Bag",
+      "name_zh": "岂止烧烤保温袋",
+      "specs": [
+        [
+          "Product group",
+          "Insulated Takeaway Bags"
+        ],
+        [
+          "Appearance",
+          "Yellow with brush lettering"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "外卖保温袋"
+        ],
+        [
+          "外观",
+          "黄色袋身、书法字样"
+        ]
+      ],
+      "images": [
+        "bags/insulated-bags/bbq-print/cover.webp",
+        "bags/insulated-bags/bbq-print/view-2.webp"
+      ]
+    },
+    {
+      "id": "bbq-kraft",
+      "category": "insulated-bags",
+      "name_en": "Kraft Finish Barbecue Bag",
+      "name_zh": "牛皮纸色烧烤袋",
+      "specs": [
+        [
+          "Product group",
+          "Insulated Takeaway Bags"
+        ],
+        [
+          "Appearance",
+          "Wide format with a kraft finish"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "外卖保温袋"
+        ],
+        [
+          "外观",
+          "横款、原色外观"
+        ]
+      ],
+      "images": [
+        "bags/insulated-bags/bbq-kraft/cover.webp",
+        "bags/insulated-bags/bbq-kraft/view-2.webp",
+        "bags/insulated-bags/bbq-kraft/view-3.webp"
+      ]
+    },
+    {
+      "id": "yummy",
+      "category": "insulated-bags",
+      "name_en": "Simply Yummy Insulated Bag",
+      "name_zh": "简单美味保温袋",
+      "specs": [
+        [
+          "Product group",
+          "Insulated Takeaway Bags"
+        ],
+        [
+          "Appearance",
+          "Light background with green lettering"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "外卖保温袋"
+        ],
+        [
+          "外观",
+          "浅色底、绿色字样"
+        ]
+      ],
+      "images": [
+        "bags/insulated-bags/yummy/cover.webp",
+        "bags/insulated-bags/yummy/view-2.webp"
+      ]
+    },
+    {
+      "id": "pink-print",
+      "category": "insulated-bags",
+      "name_en": "Pink Lettering Insulated Bag",
+      "name_zh": "粉色字样保温袋",
+      "specs": [
+        [
+          "Product group",
+          "Insulated Takeaway Bags"
+        ],
+        [
+          "Appearance",
+          "Light background with pink lettering"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "外卖保温袋"
+        ],
+        [
+          "外观",
+          "浅色底、粉色印字"
+        ]
+      ],
+      "images": [
+        "bags/insulated-bags/pink-print/cover.webp",
+        "bags/insulated-bags/pink-print/view-2.webp"
+      ]
+    },
+    {
+      "id": "hearty",
+      "category": "insulated-bags",
+      "name_en": "Hearty Meal Insulated Bag",
+      "name_zh": "记得好好吃饭保温袋",
+      "specs": [
+        [
+          "Product group",
+          "Insulated Takeaway Bags"
+        ],
+        [
+          "Appearance",
+          "Green with light lettering"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "外卖保温袋"
+        ],
+        [
+          "外观",
+          "绿色袋身、浅色字样"
+        ]
+      ],
+      "images": [
+        "bags/insulated-bags/hearty/cover.webp",
+        "bags/insulated-bags/hearty/view-2.webp"
+      ]
+    },
+    {
+      "id": "fortune-print",
+      "category": "insulated-bags",
+      "name_en": "Fortune Print Insulated Bag",
+      "name_zh": "财运亨通保温袋",
+      "specs": [
+        [
+          "Product group",
+          "Insulated Takeaway Bags"
+        ],
+        [
+          "Appearance",
+          "Cream with black lettering"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "外卖保温袋"
+        ],
+        [
+          "外观",
+          "米色袋身、黑色印字"
+        ]
+      ],
+      "images": [
+        "bags/insulated-bags/fortune-print/cover.webp",
+        "bags/insulated-bags/fortune-print/view-2.webp"
+      ]
+    },
+    {
+      "id": "yellow-cloud",
+      "category": "insulated-bags",
+      "name_en": "Yellow Cloud Insulated Bag",
+      "name_zh": "黄色云朵保温袋",
+      "specs": [
+        [
+          "Product group",
+          "Insulated Takeaway Bags"
+        ],
+        [
+          "Appearance",
+          "Yellow with blue handles"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "外卖保温袋"
+        ],
+        [
+          "外观",
+          "黄色袋身、蓝色提手"
+        ]
+      ],
+      "images": [
+        "bags/insulated-bags/yellow-cloud/cover.webp",
+        "bags/insulated-bags/yellow-cloud/view-2.webp"
+      ]
+    },
+    {
+      "id": "ribbon-handle",
+      "category": "paper-bags",
+      "name_en": "Solid Colour Ribbon Handle Paper Bag",
+      "name_zh": "纯色织带手提纸袋",
+      "specs": [
+        [
+          "Product group",
+          "Paper Carrier Bags"
+        ],
+        [
+          "Appearance",
+          "Solid colours with ribbon handles"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "纸质手提袋"
+        ],
+        [
+          "外观",
+          "纯色袋身、织带提手"
+        ]
+      ],
+      "images": [
+        "bags/paper-bags/ribbon-handle/cover.webp",
+        "bags/paper-bags/ribbon-handle/view-2.webp",
+        "bags/paper-bags/ribbon-handle/view-3.webp",
+        "bags/paper-bags/ribbon-handle/view-4.webp",
+        "bags/paper-bags/ribbon-handle/view-5.webp"
+      ]
+    },
+    {
+      "id": "black-paper",
+      "category": "paper-bags",
+      "name_en": "Black Paper Carrier",
+      "name_zh": "黑色手提纸袋",
+      "specs": [
+        [
+          "Product group",
+          "Paper Carrier Bags"
+        ],
+        [
+          "Appearance",
+          "Wide black bag with dark handles"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "纸质手提袋"
+        ],
+        [
+          "外观",
+          "黑色横款、深色提手"
+        ]
+      ],
+      "images": [
+        "bags/paper-bags/black-paper/cover.webp",
+        "bags/paper-bags/black-paper/view-2.webp",
+        "bags/paper-bags/black-paper/view-3.webp"
+      ]
+    },
+    {
+      "id": "kraft-paper",
+      "category": "paper-bags",
+      "name_en": "Kraft Paper Shopping Bag",
+      "name_zh": "牛皮纸购物袋",
+      "specs": [
+        [
+          "Product group",
+          "Paper Carrier Bags"
+        ],
+        [
+          "Appearance",
+          "Kraft finish with dark handles"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "纸质手提袋"
+        ],
+        [
+          "外观",
+          "原色袋身、深色提手"
+        ]
+      ],
+      "images": [
+        "bags/paper-bags/kraft-paper/cover.webp",
+        "bags/paper-bags/kraft-paper/view-2.webp",
+        "bags/paper-bags/kraft-paper/view-3.webp"
+      ]
+    },
+    {
+      "id": "burgundy",
+      "category": "paper-bags",
+      "name_en": "Burgundy Paper Carrier",
+      "name_zh": "酒红色手提纸袋",
+      "specs": [
+        [
+          "Product group",
+          "Paper Carrier Bags"
+        ],
+        [
+          "Appearance",
+          "Wide burgundy body"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "纸质手提袋"
+        ],
+        [
+          "外观",
+          "酒红色袋身、横款"
+        ]
+      ],
+      "images": [
+        "bags/paper-bags/burgundy/cover.webp",
+        "bags/paper-bags/burgundy/view-2.webp"
+      ]
+    },
+    {
+      "id": "pastel",
+      "category": "paper-bags",
+      "name_en": "Pastel Paper Carrier",
+      "name_zh": "浅色手提纸袋",
+      "specs": [
+        [
+          "Product group",
+          "Paper Carrier Bags"
+        ],
+        [
+          "Appearance",
+          "Pale yellow and pink variants"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "纸质手提袋"
+        ],
+        [
+          "外观",
+          "浅黄、粉色款"
+        ]
+      ],
+      "images": [
+        "bags/paper-bags/pastel/cover.webp",
+        "bags/paper-bags/pastel/view-2.webp"
+      ]
+    },
+    {
+      "id": "monochrome",
+      "category": "paper-bags",
+      "name_en": "Monochrome Paper Carrier",
+      "name_zh": "黑白手提纸袋",
+      "specs": [
+        [
+          "Product group",
+          "Paper Carrier Bags"
+        ],
+        [
+          "Appearance",
+          "Black and white with broad handles"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "纸质手提袋"
+        ],
+        [
+          "外观",
+          "黑白配色、宽幅提手"
+        ]
+      ],
+      "images": [
+        "bags/paper-bags/monochrome/cover.webp",
+        "bags/paper-bags/monochrome/view-2.webp",
+        "bags/paper-bags/monochrome/view-3.webp"
+      ]
+    },
+    {
+      "id": "pink-marble",
+      "category": "paper-bags",
+      "name_en": "Pink Marbled Paper Bag",
+      "name_zh": "粉色鎏金纸袋",
+      "specs": [
+        [
+          "Product group",
+          "Paper Carrier Bags"
+        ],
+        [
+          "Appearance",
+          "Pink marbling with light handles"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "纸质手提袋"
+        ],
+        [
+          "外观",
+          "粉色纹路、浅色提手"
+        ]
+      ],
+      "images": [
+        "bags/paper-bags/pink-marble/cover.webp",
+        "bags/paper-bags/pink-marble/view-2.webp",
+        "bags/paper-bags/pink-marble/view-3.webp"
+      ]
+    },
+    {
+      "id": "purple-marble",
+      "category": "paper-bags",
+      "name_en": "Lilac Marbled Paper Bag",
+      "name_zh": "紫色鎏金纸袋",
+      "specs": [
+        [
+          "Product group",
+          "Paper Carrier Bags"
+        ],
+        [
+          "Appearance",
+          "Lilac gradient with gold-tone veining"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "纸质手提袋"
+        ],
+        [
+          "外观",
+          "紫色渐变、金色纹路"
+        ]
+      ],
+      "images": [
+        "bags/paper-bags/purple-marble/cover.webp",
+        "bags/paper-bags/purple-marble/view-2.webp"
+      ]
+    },
+    {
+      "id": "blue-marble",
+      "category": "paper-bags",
+      "name_en": "Blue Marbled Paper Bag",
+      "name_zh": "蓝色鎏金纸袋",
+      "specs": [
+        [
+          "Product group",
+          "Paper Carrier Bags"
+        ],
+        [
+          "Appearance",
+          "Blue marbling with tonal handles"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "纸质手提袋"
+        ],
+        [
+          "外观",
+          "蓝色纹路、同色系提手"
+        ]
+      ],
+      "images": [
+        "bags/paper-bags/blue-marble/cover.webp",
+        "bags/paper-bags/blue-marble/view-2.webp",
+        "bags/paper-bags/blue-marble/view-3.webp"
+      ]
+    },
+    {
+      "id": "brocade",
+      "category": "paper-bags",
+      "name_en": "Patterned Bow Paper Bag",
+      "name_zh": "纹路蝴蝶结纸袋",
+      "specs": [
+        [
+          "Product group",
+          "Paper Carrier Bags"
+        ],
+        [
+          "Appearance",
+          "Lilac and olive variants"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "纸质手提袋"
+        ],
+        [
+          "外观",
+          "紫色、橄榄绿色款"
+        ]
+      ],
+      "images": [
+        "bags/paper-bags/brocade/cover.webp",
+        "bags/paper-bags/brocade/view-2.webp",
+        "bags/paper-bags/brocade/view-3.webp"
+      ]
+    },
+    {
+      "id": "red-hearts",
+      "category": "paper-bags",
+      "name_en": "Red Heart Paper Bag",
+      "name_zh": "红色爱心纸袋",
+      "specs": [
+        [
+          "Product group",
+          "Paper Carrier Bags"
+        ],
+        [
+          "Appearance",
+          "Red with a heart motif"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "纸质手提袋"
+        ],
+        [
+          "外观",
+          "红色袋身、爱心图案"
+        ]
+      ],
+      "images": [
+        "bags/paper-bags/red-hearts/cover.webp",
+        "bags/paper-bags/red-hearts/view-2.webp",
+        "bags/paper-bags/red-hearts/view-3.webp"
+      ]
+    },
+    {
+      "id": "rose",
+      "category": "paper-bags",
+      "name_en": "Rose Print Paper Bag",
+      "name_zh": "玫瑰花纹纸袋",
+      "specs": [
+        [
+          "Product group",
+          "Paper Carrier Bags"
+        ],
+        [
+          "Appearance",
+          "Light background with red roses"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "纸质手提袋"
+        ],
+        [
+          "外观",
+          "浅色底、红色玫瑰印花"
+        ]
+      ],
+      "images": [
+        "bags/paper-bags/rose/cover.webp",
+        "bags/paper-bags/rose/view-2.webp",
+        "bags/paper-bags/rose/view-3.webp"
+      ]
+    },
+    {
+      "id": "festive",
+      "category": "gift-bags",
+      "name_en": "Festive Gift Bag",
+      "name_zh": "福字礼品袋",
+      "specs": [
+        [
+          "Product group",
+          "Gift Bags"
+        ],
+        [
+          "Appearance",
+          "Red with festive motifs"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "礼品包装袋"
+        ],
+        [
+          "外观",
+          "红色袋身、吉祥纹样"
+        ]
+      ],
+      "images": [
+        "bags/gift-bags/festive/cover.webp",
+        "bags/gift-bags/festive/view-2.webp"
+      ]
+    },
+    {
+      "id": "wedding",
+      "category": "gift-bags",
+      "name_en": "Wedding Gift Bag",
+      "name_zh": "喜字手提袋",
+      "specs": [
+        [
+          "Product group",
+          "Gift Bags"
+        ],
+        [
+          "Appearance",
+          "Red with gold-tone wedding motifs"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "礼品包装袋"
+        ],
+        [
+          "外观",
+          "红底、金色喜字纹样"
+        ]
+      ],
+      "images": [
+        "bags/gift-bags/wedding/cover.webp",
+        "bags/gift-bags/wedding/view-2.webp"
+      ]
+    },
+    {
+      "id": "seafood",
+      "category": "gift-bags",
+      "name_en": "Seafood Gift Bag",
+      "name_zh": "海鲜礼品袋",
+      "specs": [
+        [
+          "Product group",
+          "Gift Bags"
+        ],
+        [
+          "Appearance",
+          "Seafood print with red handles"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "礼品包装袋"
+        ],
+        [
+          "外观",
+          "海鲜图案、红色提手"
+        ]
+      ],
+      "images": [
+        "bags/gift-bags/seafood/cover.webp",
+        "bags/gift-bags/seafood/view-2.webp"
+      ]
+    },
+    {
+      "id": "prawn",
+      "category": "gift-bags",
+      "name_en": "Prawn Gift Bag",
+      "name_zh": "烤虾礼品袋",
+      "specs": [
+        [
+          "Product group",
+          "Gift Bags"
+        ],
+        [
+          "Appearance",
+          "Red side panels with a prawn print"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "礼品包装袋"
+        ],
+        [
+          "外观",
+          "红色侧幅、虾图案"
+        ]
+      ],
+      "images": [
+        "bags/gift-bags/prawn/cover.webp",
+        "bags/gift-bags/prawn/view-2.webp",
+        "bags/gift-bags/prawn/view-3.webp"
+      ]
+    },
+    {
+      "id": "seasonal",
+      "category": "gift-bags",
+      "name_en": "Red Botanical Gift Bag",
+      "name_zh": "滋养礼品手提袋",
+      "specs": [
+        [
+          "Product group",
+          "Gift Bags"
+        ],
+        [
+          "Appearance",
+          "Red with a gold-tone botanical motif"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "礼品包装袋"
+        ],
+        [
+          "外观",
+          "红色袋身、金色图案"
+        ]
+      ],
+      "images": [
+        "bags/gift-bags/seasonal/cover.webp",
+        "bags/gift-bags/seasonal/view-2.webp",
+        "bags/gift-bags/seasonal/view-3.webp"
+      ]
+    },
+    {
+      "id": "wine",
+      "category": "gift-bags",
+      "name_en": "Wine Carrier",
+      "name_zh": "红酒手提袋",
+      "specs": [
+        [
+          "Product group",
+          "Gift Bags"
+        ],
+        [
+          "Appearance",
+          "Tall narrow body with a dark print"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "礼品包装袋"
+        ],
+        [
+          "外观",
+          "窄长袋型、深色印花"
+        ]
+      ],
+      "images": [
+        "bags/gift-bags/wine/cover.webp",
+        "bags/gift-bags/wine/view-2.webp"
+      ]
+    },
+    {
+      "id": "spirits",
+      "category": "gift-bags",
+      "name_en": "Red Bottle Gift Bag",
+      "name_zh": "红色酒礼手提袋",
+      "specs": [
+        [
+          "Product group",
+          "Gift Bags"
+        ],
+        [
+          "Appearance",
+          "Red body with a printed band"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "礼品包装袋"
+        ],
+        [
+          "外观",
+          "红色袋身、横幅图案"
+        ]
+      ],
+      "images": [
+        "bags/gift-bags/spirits/cover.webp",
+        "bags/gift-bags/spirits/view-2.webp"
+      ]
+    },
+    {
+      "id": "regional",
+      "category": "gift-bags",
+      "name_en": "Regional Speciality Gift Bag",
+      "name_zh": "土特产礼品袋",
+      "specs": [
+        [
+          "Product group",
+          "Gift Bags"
+        ],
+        [
+          "Appearance",
+          "Wide red body with black handles"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "礼品包装袋"
+        ],
+        [
+          "外观",
+          "红色横款、黑色提手"
+        ]
+      ],
+      "images": [
+        "bags/gift-bags/regional/cover.webp",
+        "bags/gift-bags/regional/view-2.webp"
+      ]
+    },
+    {
+      "id": "tea",
+      "category": "gift-bags",
+      "name_en": "Tea Gift Bag",
+      "name_zh": "茶叶手提袋",
+      "specs": [
+        [
+          "Product group",
+          "Gift Bags"
+        ],
+        [
+          "Appearance",
+          "Tea lettering with dark handles"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "礼品包装袋"
+        ],
+        [
+          "外观",
+          "茶字印花、深色提手"
+        ]
+      ],
+      "images": [
+        "bags/gift-bags/tea/cover.webp",
+        "bags/gift-bags/tea/view-2.webp"
+      ]
+    },
+    {
+      "id": "forest",
+      "category": "shopping-bags",
+      "name_en": "Forest Print Shopping Tote",
+      "name_zh": "原生态购物袋",
+      "specs": [
+        [
+          "Product group",
+          "Shopping Totes"
+        ],
+        [
+          "Appearance",
+          "Dark green with a tree print"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "购物手提袋"
+        ],
+        [
+          "外观",
+          "深绿色、树木图案"
+        ]
+      ],
+      "images": [
+        "bags/shopping-bags/forest/cover.webp",
+        "bags/shopping-bags/forest/view-2.webp"
+      ]
+    },
+    {
+      "id": "stitched",
+      "category": "shopping-bags",
+      "name_en": "Stitched Shopping Tote",
+      "name_zh": "车缝购物袋",
+      "specs": [
+        [
+          "Product group",
+          "Shopping Totes"
+        ],
+        [
+          "Appearance",
+          "Blue, white and black variants"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "购物手提袋"
+        ],
+        [
+          "外观",
+          "蓝、白、黑色款"
+        ]
+      ],
+      "images": [
+        "bags/shopping-bags/stitched/cover.webp",
+        "bags/shopping-bags/stitched/view-2.webp"
+      ]
+    },
+    {
+      "id": "iridescent",
+      "category": "shopping-bags",
+      "name_en": "Iridescent Tote",
+      "name_zh": "镭射手提袋",
+      "specs": [
+        [
+          "Product group",
+          "Shopping Totes"
+        ],
+        [
+          "Appearance",
+          "Iridescent finish with dark handles"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "购物手提袋"
+        ],
+        [
+          "外观",
+          "虹彩袋身、深色提手"
+        ]
+      ],
+      "images": [
+        "bags/shopping-bags/iridescent/cover.webp",
+        "bags/shopping-bags/iridescent/view-2.webp"
+      ]
+    },
+    {
+      "id": "santa",
+      "category": "shopping-bags",
+      "name_en": "Santa Print Tote",
+      "name_zh": "圣诞图案手提袋",
+      "specs": [
+        [
+          "Product group",
+          "Shopping Totes"
+        ],
+        [
+          "Appearance",
+          "Red and green with a Santa motif"
+        ]
+      ],
+      "specs_zh": [
+        [
+          "产品类别",
+          "购物手提袋"
+        ],
+        [
+          "外观",
+          "红绿配色、圣诞图案"
+        ]
+      ],
+      "images": [
+        "bags/shopping-bags/santa/cover.webp",
+        "bags/shopping-bags/santa/view-2.webp"
+      ]
     }
   ],
-  "certs": [
-    { "type": "ISO 9001:2015", "image": "cert-iso9001.png" },
-    { "type": "ISO 14001:2015", "image": "cert-iso14001.png" },
-    { "type": "CE · PED 2014/68/EU", "image": "cert-ce.png" },
-    { "type": "SGS Audited Supplier", "image": "cert-sgs.png" }
-  ],
-  "gallery": [
-    { "src": "factory-1.jpg", "alt_en": "Cold forging line in the Ningbo plant", "alt_zh": "宁波工厂冷镦产线" },
-    { "src": "factory-2.jpg", "alt_en": "CNC thread rolling machines", "alt_zh": "数控搓丝设备" },
-    { "src": "factory-3.jpg", "alt_en": "Heat treatment furnace", "alt_zh": "热处理炉" },
-    { "src": "factory-4.jpg", "alt_en": "Dimensional inspection bench", "alt_zh": "尺寸检验台" },
-    { "src": "factory-5.jpg", "alt_en": "Finished goods warehouse", "alt_zh": "成品仓库" },
-    { "src": "factory-6.jpg", "alt_en": "Packing line before export", "alt_zh": "出口包装线" }
-  ],
-  "process": [
-    { "title_en": "Wire Rod Inspection", "title_zh": "线材进料检验", "desc_en": "Mill certificate check and spectrographic analysis on every incoming coil.", "desc_zh": "每卷进料核对材质证明并做光谱分析。" },
-    { "title_en": "Cold Forging", "title_zh": "冷镦成型", "desc_en": "32 multi-station cold forging lines, M6 to M64.", "desc_zh": "32 条多工位冷镦产线，覆盖 M6–M64。" },
-    { "title_en": "Thread Rolling", "title_zh": "搓丝滚牙", "desc_en": "Rolled threads to 6H/6g tolerance, 100% gauge checked.", "desc_zh": "滚压螺纹公差 6H/6g，通止规全检。" },
-    { "title_en": "Heat Treatment", "title_zh": "热处理", "desc_en": "Continuous mesh-belt furnaces, hardness verified per batch.", "desc_zh": "连续网带炉，逐批验证硬度。" },
-    { "title_en": "Surface Coating", "title_zh": "表面处理", "desc_en": "Zinc, HDG or zinc-flake; salt-spray tested to 500 h.", "desc_zh": "镀锌 / 热浸镀锌 / 锌铝涂层，盐雾测试 500 小时。" },
-    { "title_en": "Final Inspection", "title_zh": "成品全检", "desc_en": "Dimensional and torque reports shipped with every batch.", "desc_zh": "每批随附尺寸与扭矩检验报告。" }
-  ],
-  "advantages": [
-    { "icon": "material", "title_en": "Traceable Material", "title_zh": "材料可追溯", "desc_en": "Every batch links back to a mill certificate — steel grade, heat number, mechanical properties.", "desc_zh": "每批产品可追溯至材质证明：钢号、炉号、力学性能。" },
-    { "icon": "inspection", "title_en": "100% Final Inspection", "title_zh": "成品全检", "desc_en": "Thread gauges, hardness and torque coefficient tested; reports shipped with the goods.", "desc_zh": "螺纹通止规、硬度、扭矩系数逐批检测，报告随货。" },
-    { "icon": "export", "title_en": "40+ Countries Served", "title_zh": "出口 40+ 国", "desc_en": "18 years of export packing, documents and port logistics — 40 minutes from Ningbo port.", "desc_zh": "18 年出口包装、单证与港口物流经验，距宁波港 40 分钟。" },
-    { "icon": "oem", "title_en": "OEM to Drawing", "title_zh": "来图定制", "desc_en": "Non-standard fasteners quoted from your drawing within 48 hours.", "desc_zh": "非标件按图纸报价，48 小时内回复。" }
-  ],
-  "testimonials": [
-    { "quote_en": "Dimensional reports match our incoming inspection every time. Three years, zero rejected batches.", "author": "M. Weber", "country": "Germany" },
-    { "quote_en": "They handled EN 14399 CE documentation better than our previous EU supplier.", "author": "J. Kowalski", "country": "Poland" }
-  ],
   "faq": [
-    { "q_en": "What is your MOQ?", "a_en": "1,000 pcs for standard items; 500 pcs/sets for structural bolts and large diameters. Trial orders are negotiable for first cooperation.", "q_zh": "起订量是多少？", "a_zh": "标准件 1,000 件起订；钢结构螺栓与大规格 500 件/套起订。首次合作可协商试单。" },
-    { "q_en": "What is the production lead time?", "a_en": "15–25 days for standard items after deposit; 30–40 days for non-standard or HDG items. Stock sizes ship within 7 days.", "q_zh": "生产周期多长？", "a_zh": "标准件收到定金后 15–25 天；非标件或热浸镀锌件 30–40 天；现货规格 7 天内发货。" },
-    { "q_en": "Do you provide free samples?", "a_en": "Yes — standard samples are free, freight collect. Non-standard samples are quoted case by case.", "q_zh": "提供免费样品吗？", "a_zh": "标准样品免费，运费到付；非标样品单独报价。" },
-    { "q_en": "Can you produce from our drawings?", "a_en": "Yes. Send a drawing (PDF/DWG/STEP) with material and finish requirements; our engineers reply with a quotation within 48 hours.", "q_zh": "可以按图纸定制吗？", "a_zh": "可以。发送图纸（PDF/DWG/STEP）并注明材质与表面处理要求，工程师 48 小时内报价。" },
-    { "q_en": "What payment terms do you accept?", "a_en": "T/T (30% deposit, balance against B/L copy) and irrevocable L/C at sight for orders above USD 30,000.", "q_zh": "接受哪些付款方式？", "a_zh": "T/T（30% 定金，见提单副本付尾款）；金额超过 3 万美元可接受不可撤销即期信用证。" }
+    {
+      "q_zh": "如何为叠放的餐盒选保温袋？",
+      "a_zh": "将装好餐食的餐盒加盖，按实际配送方式叠放。记录最宽处的长、宽和叠放总高度，并在询盘中注明每袋装几盒、预计配送多久。",
+      "q_en": "How should I measure stacked meal boxes for an insulated bag?",
+      "a_en": "Fill and close the boxes, then stack them as they will travel. Record the length and width at the widest point and the total height. Include the number of boxes per bag and the expected delivery time in your inquiry."
+    },
+    {
+      "q_zh": "咨询无腰线纸袋时，尺寸应怎样填写？",
+      "a_zh": "请按“袋宽 × 侧宽 × 袋高”填写，并标明单位。袋宽指正面宽度，侧宽指撑开后的侧面宽度，袋高从袋底量至袋口，不含提手。",
+      "q_en": "Which dimensions should I give for a paper bag?",
+      "a_en": "Give the front width, the depth of the opened side gusset and the height from the base to the top edge. Exclude the handles and state the unit of measurement."
+    }
   ]
 }

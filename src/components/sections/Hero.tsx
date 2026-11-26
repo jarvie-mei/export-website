@@ -4,7 +4,9 @@ import { ButtonLink } from "@/components/ui/Button";
 
 export const heroSchema = z.object({
   // 版式变体：editorial = 左对齐钢印（自有语言默认）；centered = 居中大图白字（对标站常见版式）
-  variant: z.enum(["editorial", "centered"]).default("editorial"),
+  variant: z.enum(["editorial", "centered", "split"]).default("editorial"),
+  companyName: z.string().optional(),
+  caption: z.string().optional(),
   headline: z.string(),
   subline: z.string().optional(),
   ctas: z.array(z.object({ label: z.string(), href: z.string() })).max(2),
@@ -16,7 +18,27 @@ export const heroSchema = z.object({
 export type HeroProps = z.infer<typeof heroSchema>;
 
 // 首屏。LCP 元素：背景图 priority preload；深底子树语义色自动翻转。
-export function Hero({ variant, headline, subline, ctas, image, imageAlt, badges }: HeroProps) {
+export function Hero({ variant, companyName, caption, headline, subline, ctas, image, imageAlt, badges }: HeroProps) {
+  if (variant === "split") {
+    return (
+      <section data-section="hero" className="bg-surface">
+        <div className="container-site grid items-center gap-8 py-10 sm:py-14 lg:grid-cols-[2fr_3fr] lg:gap-12 lg:py-20">
+          <div>
+            <p className="mb-5 font-semibold text-primary">{companyName}</p>
+            <h1 className="type-display whitespace-pre-line text-ink">{headline}</h1>
+            {subline && <p className="mt-5 max-w-md leading-relaxed text-muted">{subline}</p>}
+            <div className="mt-7 flex flex-wrap gap-4">
+              {ctas.map((cta) => <ButtonLink key={cta.href} href={cta.href}>{cta.label}</ButtonLink>)}
+            </div>
+          </div>
+          <figure>
+            <Image src={image} alt={imageAlt} width={1612} height={800} preload sizes="(min-width: 1024px) 60vw, 100vw" className="h-auto w-full" />
+            {caption && <figcaption className="mt-2 text-right text-sm text-muted">{caption}</figcaption>}
+          </figure>
+        </div>
+      </section>
+    );
+  }
   if (variant === "centered") {
     return (
       <section data-section="hero" className="tone-dark relative isolate flex min-h-[min(72svh,44rem)] flex-col items-center justify-center overflow-hidden bg-bg">

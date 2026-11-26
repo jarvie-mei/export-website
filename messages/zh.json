@@ -5,19 +5,19 @@
     "getQuote": "获取报价"
   },
   "form": {
-    "defaultHeading": "索取报价",
-    "defaultLead": "发送图纸、标准号或数量——工程师 24 小时内回复。",
+    "defaultHeading": "包装袋询价",
+    "defaultLead": "请注明袋型、所需尺寸和采购数量。若还未确定袋子尺寸，可填写餐盒或商品的长、宽、高。",
     "regarding": "咨询产品",
     "name": "姓名",
     "email": "工作邮箱",
     "country": "国家/地区",
     "quantity": "数量",
-    "quantityHint": "如 5,000 件",
+    "quantityHint": "如 5,000 个",
     "message": "留言",
     "sending": "发送中…",
     "submit": "发送询盘",
-    "ok": "已收到，我们将在 24 小时内回复。",
-    "error": "发送失败——请直接发邮件联系我们。"
+    "ok": "询盘已提交。",
+    "error": "暂时无法提交，请稍后重试。"
   },
   "contact": {
     "email": "邮箱",
@@ -32,7 +32,8 @@
     "specs": "规格参数",
     "zoom": "放大图片",
     "requestQuote": "索取报价",
-    "whatsapp": "WhatsApp 联系"
+    "whatsapp": "WhatsApp 联系",
+    "imageView": "{name}，第 {number} 张产品图"
   },
   "footer": {
     "sitemap": "站点地图",
@@ -42,7 +43,7 @@
     "docNo": "REV {year} · ENGINEERED SUPPLY"
   },
   "sections": {
-    "productRange": "产品中心",
+    "productRange": "主营产品",
     "hotProducts": "热门产品",
     "categories": "按类目浏览",
     "certifications": "资质与认证",
@@ -50,15 +51,16 @@
     "howWeWork": "生产流程",
     "whyUs": "为什么选择我们",
     "buyersSay": "客户评价",
-    "faqHeading": "常见问题",
+    "faqHeading": "袋型与尺寸",
     "contactUs": "联系我们",
-    "ctaHeadline": "发来图纸，24 小时内获取报价。",
+    "ctaHeadline": "咨询包装袋尺寸与报价",
     "ctaButton": "索取报价",
     "getQuote": "获取报价",
     "viewProducts": "查看产品",
     "foundedLabel": "成立年份",
     "employeesLabel": "员工人数",
     "relatedProducts": "相关产品",
-    "catalogIntro": "{name}产品目录"
+    "catalogIntro": "{name}产品目录",
+    "collectionCaption": "绿色纸纹保温袋 · 鎏金手提纸袋"
   }
 }

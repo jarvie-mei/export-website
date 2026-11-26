@@ -48,12 +48,16 @@ export function buildSectionProps(
       if (!hero) return null;
       return {
         variant: layout(hints).variant ?? themeDefaults.heroVariant,
+        companyName: pick(company, "name", locale),
+        caption: t("collectionCaption"),
         headline: pick(hero, "headline", locale),
         subline: pick(hero, "subline", locale) || undefined,
         image: mediaUrl(hero.image),
-        imageAlt: pick(company, "name", locale),
+        imageAlt: pick(hero, "headline", locale).replace(/\n/g, " · "),
         badges: hero.badges,
-        ctas:
+        ctas: hints.variant === "split"
+          ? [{ label: t("viewProducts"), href: "/products" }]
+          :
           (num(hints, "cta_count") ?? 2) >= 2
             ? [
                 { label: t("getQuote"), href: "/contact#inquiry" },
@@ -212,6 +216,7 @@ export function buildSectionProps(
       return {};
 
     case "contact_block":
+      if (!company.whatsapp && !company.email && !company.phone && !pick(company, "address", locale)) return null;
       return {
         heading: t("contactUs"),
         whatsapp: company.whatsapp,

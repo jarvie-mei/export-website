@@ -57,11 +57,11 @@ export default async function LocaleLayout({
     url: site.base_url,
     email: content.company.email,
     foundingDate: content.company.founded ? String(content.company.founded) : undefined,
-    address: {
+    address: pick(content.company, "address", l) ? {
       "@type": "PostalAddress",
       streetAddress: pick(content.company, "address", l),
       addressCountry: "CN",
-    },
+    } : undefined,
   };
 
   // theme.json → CSS 变量（inline style 优先级高于 stylesheet 默认值）

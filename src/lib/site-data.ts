@@ -10,7 +10,10 @@ import {
 // 构建时校验：数据不合法 → 构建失败，不出货（QA 门禁的第一道）
 export const blueprint = blueprintSchema.parse(blueprintJson);
 export const content = contentPackSchema.parse(contentJson);
-export const site = siteConfigSchema.parse(siteJson);
+export const site = siteConfigSchema.parse({
+  ...siteJson,
+  base_url: process.env.SITE_URL?.replace(/\/$/, "") || siteJson.base_url,
+});
 
 export type Locale = "en" | "zh";
 

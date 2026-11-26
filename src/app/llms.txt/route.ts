@@ -1,4 +1,4 @@
-import { content, productHref, site } from "@/lib/site-data";
+import { blueprint, content, pageHref, productHref, site } from "@/lib/site-data";
 
 export const dynamic = "force-static";
 
@@ -19,28 +19,19 @@ export function GET() {
     "",
     c.about_en,
     "",
-    `- Founded: ${c.founded}`,
-    `- Team Size: ${c.employees}`,
-    `- Address: ${c.address_en}`,
-    `- Email: ${c.email}`,
-    `- Phone: ${c.phone}`,
-    `- WhatsApp: ${c.whatsapp}`,
+    ...Object.entries({
+      Founded: c.founded,
+      "Team size": c.employees,
+      Address: c.address_en,
+      Email: c.email,
+      Phone: c.phone,
+      WhatsApp: c.whatsapp,
+    }).filter(([, value]) => value).map(([key, value]) => `- ${key}: ${value}`),
     "",
     "## Key Pages",
     "",
-    `- [Home (EN)](${base}/en)`,
-    `- [Home (ZH)](${base}/zh)`,
-    `- [Products Catalog](${base}/en/products)`,
-    `- [About Factory](${base}/en/about)`,
-    `- [Quality & Certifications](${base}/en/quality)`,
-    `- [FAQ](${base}/en/faq)`,
-    `- [Contact / Request a Quote (RFQ)](${base}/en/contact)`,
-    "",
-    "## Product Categories",
-    "",
-    ...content.categories.map(
-      (cat) => `- ${cat.name_en} (${cat.name_zh}): ${base}/en/products?cat=${cat.id}`
-    ),
+    ...blueprint.pages.map((page) => `- [${page.label_en}](${base}/en${pageHref(page.id)})`),
+    `- [中文首页](${base}/zh)`,
     "",
     "## Featured Products",
     "",

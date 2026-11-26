@@ -11,10 +11,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const l = locale as Locale;
+  const title = content.hero ? pick(content.hero, "headline", l).replace(/\n/g, " ") : pick(content.company, "name", l);
   return buildMetadata({
     locale: l,
     path: "/",
-    title: pick(content.company, "name", l),
+    title,
     description: pick(content.company, "tagline", l) || undefined,
   });
 }

@@ -41,3 +41,6 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# Original supplier assets. Web-ready selections live in public/media/bags/.
+/商品素材/

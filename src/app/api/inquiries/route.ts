@@ -1,3 +1,4 @@
+import siteConfig from "../../../../site/site.json";
 import { NextResponse } from "next/server";
 
 export const runtime = "nodejs";
@@ -49,7 +50,7 @@ export async function POST(req: Request) {
   }
 
   const payload = {
-    site_id: body.site_id ?? "nextjs-export-starter",
+    site_id: body.site_id ?? siteConfig.site_id,
     name,
     email,
     country,
@@ -137,7 +138,7 @@ export async function POST(req: Request) {
     }
   }
 
-  if (!resendKey && !webhook) {
+  if (!resendKey && !webhook && process.env.NODE_ENV === "development") {
     console.log("[inquiries] received (no RESEND_API_KEY / INQUIRY_WEBHOOK_URL)", JSON.stringify(payload, null, 2));
     delivered = true;
   }
