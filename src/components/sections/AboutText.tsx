@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { z } from "zod";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
@@ -6,6 +7,8 @@ export const aboutTextSchema = z.object({
   variant: z.enum(["split", "centered"]).default("split"),
   heading: z.string(),
   body: z.string(),
+  image: z.string().optional(),
+  imageAlt: z.string().optional(),
   facts: z
     .array(z.object({ label: z.string(), value: z.string() }))
     .default([]),
@@ -14,7 +17,7 @@ export type AboutTextProps = z.infer<typeof aboutTextSchema>;
 
 // About 散文块：对标站 about 页散文是普遍结构，15 个首发组件之外的最小补充。
 // 内容来自 content_pack.company.about_*（Stage B 由执照+简介生成，150 词内）。
-export function AboutText({ variant, heading, body, facts }: AboutTextProps) {
+export function AboutText({ variant, heading, body, image, imageAlt, facts }: AboutTextProps) {
   if (variant === "centered") {
     return (
       <section data-section="about_text" className="section-pad bg-bg">
@@ -37,25 +40,27 @@ export function AboutText({ variant, heading, body, facts }: AboutTextProps) {
   }
 
   return (
-    <section data-section="about_text" className="section-pad bg-bg">
-      <div className="container-site grid grid-cols-1 gap-x-16 lg:grid-cols-[minmax(16rem,1fr)_2fr]">
+    <section data-section="about_text" className="section-pad border-t border-line bg-surface">
+      <div className={`container-site grid items-center gap-8 ${image ? "md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20" : ""}`}>
+        {image && (
+          <div className="relative aspect-[4/3] overflow-hidden rounded-(--radius) bg-bg">
+            <Image src={image} alt={imageAlt ?? ""} fill sizes="(min-width: 768px) 42vw, 100vw" className="object-cover" />
+          </div>
+        )}
         <div>
           <SectionHeading title={heading} />
+          <p className="max-w-[60ch] leading-[1.9] text-muted">{body}</p>
           {facts.length > 0 && (
-            <dl className="space-y-4">
-              {facts.map((f) => (
-                <div
-                  key={f.label}
-                  className="flex flex-row-reverse items-baseline justify-end gap-4"
-                >
-                  <dt className="text-sm text-muted">{f.label}</dt>
-                  <dd className="type-figure text-2xl text-primary">{f.value}</dd>
+            <dl className="mt-6 flex flex-wrap gap-8 border-t border-line pt-5">
+              {facts.map((fact) => (
+                <div key={fact.label}>
+                  <dt className="text-sm text-muted">{fact.label}</dt>
+                  <dd className="type-figure text-2xl text-primary">{fact.value}</dd>
                 </div>
               ))}
             </dl>
           )}
         </div>
-        <p className="max-w-[68ch] text-lg leading-relaxed text-ink">{body}</p>
       </div>
     </section>
   );

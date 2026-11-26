@@ -21,19 +21,42 @@ export type HeroProps = z.infer<typeof heroSchema>;
 export function Hero({ variant, companyName, caption, headline, subline, ctas, image, imageAlt, badges }: HeroProps) {
   if (variant === "split") {
     return (
-      <section data-section="hero" className="bg-surface">
-        <div className="container-site grid items-center gap-8 py-10 sm:py-14 lg:grid-cols-[2fr_3fr] lg:gap-12 lg:py-20">
-          <div>
-            <p className="mb-5 font-semibold text-primary">{companyName}</p>
-            <h1 className="type-display whitespace-pre-line text-ink">{headline}</h1>
-            {subline && <p className="mt-5 max-w-md leading-relaxed text-muted">{subline}</p>}
-            <div className="mt-7 flex flex-wrap gap-4">
-              {ctas.map((cta) => <ButtonLink key={cta.href} href={cta.href}>{cta.label}</ButtonLink>)}
-            </div>
+      <section data-section="hero" className="border-b border-line bg-surface">
+        <div className="container-site grid items-center gap-7 pt-10 pb-6 sm:gap-10 sm:pt-14 sm:pb-9 lg:grid-cols-[minmax(0,0.87fr)_minmax(0,1.13fr)] lg:gap-[clamp(2rem,4vw,5rem)] lg:py-[clamp(3rem,5vw,5rem)]">
+          <div className="anim-rise">
+            {companyName && (
+              <p className="mb-5 flex items-center gap-3 text-sm font-semibold tracking-wide text-primary">
+                <span aria-hidden="true" className="h-px w-8 shrink-0 bg-accent" />
+                {companyName}
+              </p>
+            )}
+            <h1
+              className="whitespace-pre-line text-[clamp(2.55rem,5.1vw,5rem)] leading-[1.12] font-medium tracking-[-0.045em] text-primary"
+              style={{ fontFamily: "var(--display-family)" }}
+            >
+              {headline}
+            </h1>
+            {subline && <p className="mt-5 max-w-[36ch] text-base leading-[1.8] text-muted sm:mt-7 sm:text-lg">{subline}</p>}
+            {ctas.length > 0 && (
+              <div className="mt-7 flex flex-wrap gap-3 sm:mt-9">
+                {ctas.map((cta, i) => (
+                  <ButtonLink key={cta.href} href={cta.href} variant={i === 0 ? "primary" : "outline"}>
+                    {cta.label}
+                  </ButtonLink>
+                ))}
+              </div>
+            )}
           </div>
-          <figure>
-            <Image src={image} alt={imageAlt} width={1612} height={800} preload sizes="(min-width: 1024px) 60vw, 100vw" className="h-auto w-full" />
-            {caption && <figcaption className="mt-2 text-right text-sm text-muted">{caption}</figcaption>}
+          <figure className="anim-rise-late min-w-0">
+            <div className="relative aspect-square overflow-hidden rounded-(--radius) bg-surface-2">
+              <Image src={image} alt={imageAlt} fill preload sizes="(min-width: 1280px) 44rem, (min-width: 1024px) 56vw, 96vw" className="object-cover" />
+            </div>
+            {caption && (
+              <figcaption className="mt-3 flex items-center gap-3 text-sm leading-relaxed text-muted">
+                <span aria-hidden="true" className="h-px w-6 shrink-0 bg-accent" />
+                {caption}
+              </figcaption>
+            )}
           </figure>
         </div>
       </section>

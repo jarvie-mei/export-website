@@ -7,8 +7,8 @@
     "wechat": "微信号",
     "email": "邮箱",
     "phone": "电话",
-    "address": "工厂地址",
-    "mapAlt": "工厂位置地图"
+    "address": "公司地址",
+    "mapAlt": "公司位置地图"
   },
   "product": {
     "breadcrumb": "面包屑导航",
@@ -42,7 +42,6 @@
     "foundedLabel": "成立年份",
     "employeesLabel": "员工人数",
     "relatedProducts": "相关产品",
-    "catalogIntro": "{name}产品目录",
-    "collectionCaption": "绿色纸纹保温袋 · 鎏金手提纸袋"
+    "catalogIntro": "{name}产品目录"
   }
 }

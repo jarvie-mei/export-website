@@ -31,71 +31,51 @@ export function CategoryNav({
   const withImages = categories.some((c) => c.image);
 
   return (
-    <section data-section="category_nav" className="section-pad bg-surface">
-      <div className="container-site">
-        {heading && (
+    <nav aria-label={heading} data-section="category_nav" className="border-b border-line bg-surface">
+      <div className={`container-site py-7 sm:py-9 ${headingAlign === "center" ? "text-center" : ""}`}>
+        {withImages && heading ? (
           <SectionHeading title={heading} lead={lead} align={headingAlign} />
-        )}
-
-        {withImages ? (
-          <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
-            {categories.map((c) => (
-              <li key={c.id}>
-                <Link href={c.href} className="group block">
-                  <div className="relative aspect-4/3 overflow-hidden border border-line bg-bg">
-                    {c.image && (
-                      <Image
-                        src={c.image}
-                        alt={c.name}
-                        fill
-                        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
-                        className="object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]"
-                      />
-                    )}
-                  </div>
-                  <p className="mt-2.5 text-sm font-semibold text-ink group-hover:text-primary">
-                    {c.name}
-                  </p>
-                </Link>
-              </li>
-            ))}
-          </ul>
         ) : (
-          <ul className="grid grid-cols-1 gap-x-12 md:grid-cols-2">
-            {categories.map((c) => (
-              <li key={c.id} className="border-b border-line py-5">
-                <Link
-                  href={c.href}
-                  className="group flex items-baseline justify-between gap-4"
-                >
-                  <span className="text-lg font-bold text-ink group-hover:text-primary">
-                    {c.name}
-                  </span>
-                  {c.children.length > 0 && (
-                    <span className="tabular shrink-0 text-sm text-muted">
-                      {String(c.children.length).padStart(2, "0")}
-                    </span>
-                  )}
-                </Link>
-                {c.children.length > 0 && (
-                  <ul className="mt-2.5 flex flex-wrap gap-x-5 gap-y-1.5">
-                    {c.children.map((ch) => (
-                      <li key={ch.id}>
-                        <Link
-                          href={ch.href}
-                          className="text-sm text-muted underline-offset-4 hover:text-primary hover:underline"
-                        >
-                          {ch.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
-          </ul>
+          <>
+            {heading && <h2 className="text-base font-semibold text-primary">{heading}</h2>}
+            {lead && <p className="mt-2 text-muted">{lead}</p>}
+          </>
         )}
+        <ul className={withImages
+          ? "mt-4 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5"
+          : `mt-3 flex flex-wrap gap-2 ${headingAlign === "center" ? "justify-center" : ""}`
+        }>
+          {categories.map((c) => (
+            <li key={c.id} className="min-w-0 max-w-full">
+              <Link
+                href={c.href}
+                className={withImages
+                  ? "group block text-base font-semibold text-ink hover:text-primary"
+                  : "inline-flex min-h-11 items-center gap-2 rounded-full border border-primary/25 bg-bg px-4 py-2 text-sm font-medium text-primary transition-colors hover:border-primary hover:bg-primary hover:text-on-primary"
+                }
+              >
+                {withImages && (
+                  <span className="relative mb-3 block aspect-square overflow-hidden rounded-(--radius) border border-line bg-white">
+                    {c.image && <Image src={c.image} alt="" fill sizes="(max-width: 640px) 50vw, 22vw" className="object-contain" />}
+                  </span>
+                )}
+                {c.name}
+              </Link>
+              {c.children.length > 0 && (
+                <ul className="mt-2 flex flex-wrap gap-x-3 gap-y-1">
+                  {c.children.map((ch) => (
+                    <li key={ch.id}>
+                      <Link href={ch.href} className="text-sm text-muted underline underline-offset-4 hover:text-primary">
+                        {ch.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ul>
       </div>
-    </section>
+    </nav>
   );
 }

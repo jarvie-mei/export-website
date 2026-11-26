@@ -8,17 +8,24 @@
     "phone": "+8618705770222",
     "wechat": "poloker",
     "email": "654279561@qq.com",
+    "address_zh": "浙江省温州市平阳县萧江镇桃源大道326号",
+    "address_en": "No. 326 Taoyuan Avenue, Xiaojiang Town, Pingyang County, Wenzhou, Zhejiang, China",
     "tagline_en": "Insulated takeaway bags and paper bags without a horizontal fold.",
     "tagline_zh": "主营外卖保温袋、无腰线纸袋。",
     "about_en": "Zhejiang Jiarong Packaging Co., Ltd. supplies insulated takeaway bags for meal deliveries and paper bags without a horizontal fold for takeout and retail purchases. When choosing a bag, start with the size of the packed contents. For stacked meal boxes, measure the full stack with the lids in place.",
-    "about_zh": "浙江佳荣包装股份有限公司主营外卖保温袋和无腰线纸袋。外卖保温袋用于餐食配送，无腰线纸袋用于外带餐品和门店商品的提装。选袋时，可先测量装入物的长、宽、高；多层餐盒请按加盖后叠放的总高度测量。"
+    "about_zh": "浙江佳荣包装股份有限公司主营外卖保温袋和无腰线纸袋。外卖保温袋用于餐食配送，无腰线纸袋用于外带餐品和门店商品的提装。选袋时，可先测量装入物的长、宽、高；多层餐盒请按加盖后叠放的总高度测量。",
+    "about_image": "bags/paper-bags/blue-marble/view-2.webp",
+    "about_image_alt_zh": "蓝色鎏金纸袋的袋身与提手",
+    "about_image_alt_en": "Blue marbled paper bags with ribbon handles"
   },
   "hero": {
     "headline_en": "Insulated takeaway bags\n& paper bags",
     "headline_zh": "外卖保温袋\n无腰线纸袋",
     "subline_en": "Thermal carriers for meal deliveries. Paper bags with an uninterrupted front panel for takeout and retail.",
     "subline_zh": "餐食配送用保温袋，门店外带用无腰线纸袋。按装载尺寸、使用场景和采购数量选袋。",
-    "image": "bags/collection.webp"
+    "image": "bags/kraft-lunch-carriers.webp",
+    "caption_zh": "原色外卖保温袋",
+    "caption_en": "Kraft-finish insulated takeaway bags"
   },
   "categories": [
     {
@@ -116,6 +123,7 @@
         ]
       ],
       "images": [
+        "bags/paper-bags/paper-bag-without-horizontal-fold/kraft-pair.webp",
         "bags/paper-bags/paper-bag-without-horizontal-fold/cover.webp",
         "bags/paper-bags/paper-bag-without-horizontal-fold/view-2.webp"
       ]

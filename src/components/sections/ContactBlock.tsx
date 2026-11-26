@@ -1,7 +1,6 @@
 import { z } from "zod";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export const contactBlockSchema = z.object({
   heading: z.string().optional(),
@@ -34,19 +33,27 @@ export function ContactBlock({
   ];
 
   return (
-    <section data-section="contact_block" className="section-pad-tight bg-bg">
-      <div className={`container-site grid gap-10 ${mapImage ? "lg:grid-cols-2" : ""}`}>
-        <div>
-          {heading && <SectionHeading title={heading} />}
-          <dl className={`grid gap-x-8 border-t border-line ${mapImage ? "" : "md:grid-cols-3"}`}>
+    <section data-section="contact_block" className="section-pad bg-bg">
+      <div className="container-site">
+        <div className="grid overflow-hidden rounded-lg border border-line bg-bg lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)]">
+          <div className="tone-dark flex min-w-0 flex-col justify-between gap-10 bg-bg p-7 text-ink sm:p-10 lg:gap-20">
+            {heading && <h2 className="type-display-sm max-w-[18ch] text-balance">{heading}</h2>}
+            {address && (
+              <div className="border-t border-line pt-5">
+                <p className="text-sm text-muted">{t("address")}</p>
+                <address className="mt-2 max-w-[38ch] select-all text-balance text-base leading-relaxed not-italic">{address}</address>
+              </div>
+            )}
+          </div>
+          <dl className="grid content-center divide-y divide-line bg-surface px-7 py-3 sm:px-10 sm:py-5">
             {contacts.map((contact) => contact && (
-              <div key={contact.label} className="min-w-0 border-b border-line py-5">
-                <dt className="text-sm font-medium text-muted">{contact.label}</dt>
-                <dd className="mt-1 break-words text-lg font-semibold text-ink">
+              <div key={contact.label} className="grid min-w-0 gap-1 py-5 sm:grid-cols-[6rem_minmax(0,1fr)] sm:items-baseline sm:gap-4">
+                <dt className="text-sm text-muted">{contact.label}</dt>
+                <dd className="min-w-0 text-lg font-medium tracking-tight text-ink [overflow-wrap:anywhere]">
                   {contact.href ? (
                     <a
                       href={contact.href}
-                      className="text-primary underline underline-offset-4 hover:text-ink"
+                      className="text-primary underline decoration-primary/35 underline-offset-4 hover:decoration-primary"
                       {...(contact.href.startsWith("https:") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     >
                       {contact.value}
@@ -57,17 +64,11 @@ export function ContactBlock({
                 </dd>
               </div>
             ))}
-            {address && (
-              <div className="col-span-full border-b border-line py-5">
-                <dt className="text-sm font-medium text-muted">{t("address")}</dt>
-                <dd className="mt-1"><address className="not-italic">{address}</address></dd>
-              </div>
-            )}
           </dl>
         </div>
 
         {mapImage && (
-          <figure className="relative min-h-72 overflow-hidden border border-line bg-surface lg:min-h-0">
+          <figure className="relative mt-6 min-h-72 overflow-hidden rounded-lg border border-line bg-surface">
             <Image
               src={mapImage}
               alt={t("mapAlt")}

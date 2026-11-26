@@ -49,11 +49,11 @@ export function buildSectionProps(
       return {
         variant: layout(hints).variant ?? themeDefaults.heroVariant,
         companyName: pick(company, "name", locale),
-        caption: t("collectionCaption"),
+        caption: pick(hero, "caption", locale) || undefined,
         headline: pick(hero, "headline", locale),
         subline: pick(hero, "subline", locale) || undefined,
         image: mediaUrl(hero.image),
-        imageAlt: pick(hero, "headline", locale).replace(/\n/g, " · "),
+        imageAlt: pick(hero, "caption", locale) || pick(hero, "headline", locale).replace(/\n/g, " · "),
         badges: hero.badges,
         ctas: [{ label: t("viewProducts"), href: "/products" }],
       };
@@ -232,6 +232,8 @@ export function buildSectionProps(
         variant: layout(hints).variant,
         heading: pick(company, "name", locale),
         body: pick(company, "about", locale),
+        image: company.about_image ? mediaUrl(company.about_image) : undefined,
+        imageAlt: pick(company, "about_image_alt", locale),
         facts: [
           ...(company.founded
             ? [{ label: t("foundedLabel"), value: String(company.founded) }]

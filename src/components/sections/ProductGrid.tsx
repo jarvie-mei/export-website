@@ -35,48 +35,36 @@ const COLS: Record<2 | 3 | 4, string> = {
   4: "sm:grid-cols-2 lg:grid-cols-4",
 };
 
-function ProductCard({ p, cardStyle }: { p: Product; cardStyle: "line" | "panel" }) {
-  if (cardStyle === "panel") {
-    return (
-      <Link href={p.href} className="group block bg-surface p-4 transition-colors duration-150 hover:bg-surface-2">
-        <div className="relative aspect-square overflow-hidden bg-bg">
-          <Image
-            src={p.image}
-            alt={p.name}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-contain transition-transform duration-300 ease-out group-hover:scale-[1.03]"
-          />
-        </div>
-        <div className="px-1 pt-4 pb-1 text-center">
-          <h3 className="text-sm font-semibold text-ink group-hover:text-primary">{p.name}</h3>
-          {p.model && <p className="type-label mt-1.5 text-muted">{p.model}</p>}
-        </div>
-      </Link>
-    );
-  }
+function ProductCard({
+  p,
+  cardStyle,
+  columns,
+  grouped,
+}: {
+  p: Product;
+  cardStyle: ProductGridProps["cardStyle"];
+  columns: ProductGridProps["columns"];
+  grouped: boolean;
+}) {
+  const Title = grouped ? "h4" : "h3";
+  const sizes = columns === 2
+    ? "(max-width: 639px) 92vw, 50vw"
+    : `(max-width: 1023px) 50vw, ${Math.ceil(100 / columns)}vw`;
 
   return (
-    <Link
-      href={p.href}
-      className="group block border border-line bg-bg transition-colors duration-150 hover:border-ink/40"
-    >
-      <div className="relative aspect-square overflow-hidden bg-surface">
-        <Image
-          src={p.image}
-          alt={p.name}
-          fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-contain transition-transform duration-300 ease-out group-hover:scale-[1.03]"
-        />
+    <Link href={p.href} className="group flex h-full min-w-0 flex-col">
+      <div
+        className={`relative aspect-square w-full rounded-(--radius) border border-line bg-white transition-colors group-hover:border-primary/50 ${cardStyle === "panel" ? "p-2 sm:p-3" : ""}`}
+      >
+        <div className="relative size-full">
+          <Image src={p.image} alt="" fill sizes={sizes} className="object-contain" />
+        </div>
       </div>
-      <div className="flex items-baseline justify-between gap-3 border-t border-line px-4 py-3.5">
-        <h3 className="text-sm font-semibold text-ink group-hover:text-primary">
+      <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 py-3 sm:py-4">
+        <Title className="text-base font-semibold leading-snug tracking-tight text-ink group-hover:text-primary group-hover:underline group-hover:underline-offset-4 sm:text-lg">
           {p.name}
-        </h3>
-        {p.model && (
-          <span className="type-label shrink-0 text-muted">{p.model}</span>
-        )}
+        </Title>
+        {p.model && <span className="tabular text-sm text-muted">{p.model}</span>}
       </div>
     </Link>
   );
@@ -107,28 +95,34 @@ export function ProductGrid({
     <section data-section="product_grid" className="section-pad bg-bg">
       <div className="container-site">
         {heading && (
-          <SectionHeading title={heading} lead={lead} align={headingAlign} />
+          groupedByCategory ? (
+            <header className={lead ? "mb-8" : "sr-only"}>
+              <h2 className="type-display-sm">{heading}</h2>
+              {lead && <p className="mt-3 text-muted">{lead}</p>}
+            </header>
+          ) : (
+            <SectionHeading title={heading} lead={lead} align={headingAlign} />
+          )
         )}
-        <div className="space-y-14">
+        <div className="space-y-14 sm:space-y-20">
           {groups.map(({ cat, items }) => (
             <div
               key={cat || "all"}
               id={groupedByCategory && cat ? `cat-${cat}` : undefined}
-              className="scroll-mt-20"
+              className="scroll-mt-24"
             >
               {groupedByCategory && cat && (
-                <div className="mb-6 flex items-baseline gap-4">
-                  <h3 className="text-xl font-bold text-ink">{catName(cat)}</h3>
+                <div className="mb-5 flex items-baseline gap-3 border-t border-primary/40 pt-5 sm:mb-8">
+                  <h3 className="text-xl font-semibold tracking-tight text-primary sm:text-2xl">{catName(cat)}</h3>
                   <span className="tabular text-sm text-muted">
-                    {String(items.length).padStart(2, "0")}
+                    ({items.length})
                   </span>
-                  <div className="dim-rule flex-1 self-center" />
                 </div>
               )}
-              <ul className={`grid grid-cols-1 gap-5 ${COLS[columns]}`}>
+              <ul className={`grid gap-x-3 gap-y-5 sm:gap-x-6 sm:gap-y-8 ${columns === 2 ? "grid-cols-1" : "grid-cols-2"} ${COLS[columns]}`}>
                 {items.map((p) => (
-                  <li key={p.id}>
-                    <ProductCard p={p} cardStyle={cardStyle} />
+                  <li key={p.id} className="min-w-0">
+                    <ProductCard p={p} cardStyle={cardStyle} columns={columns} grouped={groupedByCategory && Boolean(cat)} />
                   </li>
                 ))}
               </ul>

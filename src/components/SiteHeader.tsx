@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { Icon } from "@/components/ui/icons";
 import { content, navPages, pick, type Locale } from "@/lib/site-data";
 
 // 站点导航。移动端菜单 = 原生 Popover（零 JS）；语言切换 = 当前路径互换 locale。
@@ -20,10 +21,11 @@ export function SiteHeader({
     pick(content.company, "name", locale);
   const otherLocale = locale === "en" ? "zh" : "en";
   const { phone, email } = content.company;
+  const showTopbar = variant === "topbar" && Boolean(phone || email);
 
   return (
-    <header className="sticky top-0 z-(--z-nav) border-b border-line bg-bg">
-      {variant === "topbar" && (phone || email) && (
+    <header className="sticky top-0 z-(--z-nav) border-b border-line bg-bg/95 backdrop-blur-md">
+      {showTopbar && (
         <div className="tone-dark bg-bg">
           <div className="container-site flex h-9 items-center justify-between gap-6 text-xs">
             {phone ? (
@@ -39,45 +41,50 @@ export function SiteHeader({
           </div>
         </div>
       )}
-      <div className="container-site flex h-16 items-center justify-between gap-6">
-        <Link href="/" className="min-w-0 lg:shrink-0">
-          <span className="block truncate text-lg font-bold tracking-tight text-primary sm:text-xl">
+      <div className="container-site flex h-16 items-center gap-3 sm:h-20 sm:gap-6">
+        <Link href="/" className="group mr-auto inline-flex min-w-0 items-center gap-2.5 text-primary sm:gap-3" aria-current={path === "/" ? "page" : undefined}>
+          <span aria-hidden="true" className="grid size-9 shrink-0 place-items-center rounded-tl-xl rounded-br-xl bg-primary text-on-primary sm:size-11">
+            <Icon name="package" className="size-6" />
+          </span>
+          <span className="min-w-0 text-[clamp(0.95rem,2.5vw,1.33rem)] leading-tight font-semibold tracking-[0.045em] sm:truncate">
             {companyName}
           </span>
         </Link>
 
-        <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">
+        <nav aria-label={locale === "zh" ? "主导航" : "Primary navigation"} className="hidden items-center gap-6 lg:flex xl:gap-8">
           {pages.map((p) => (
             <Link
               key={p.href}
               href={p.href}
-              className={`text-sm font-semibold whitespace-nowrap ${path === p.href ? "text-primary" : "text-ink hover:text-primary"}`}
+              aria-current={path === p.href ? "page" : undefined}
+              className="border-b border-transparent py-2 text-sm font-medium whitespace-nowrap text-muted transition-colors hover:border-primary/35 hover:text-primary aria-[current=page]:border-primary aria-[current=page]:text-primary"
             >
               {p.label}
             </Link>
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex shrink-0 items-center gap-1 sm:gap-3 lg:border-l lg:border-line lg:pl-6">
           <Link
             href={path}
             locale={otherLocale}
-            className="type-label whitespace-nowrap border border-line px-2.5 py-2 text-muted hover:border-ink hover:text-ink"
-            // 系统字体渲染"中文"两字，避免 en 页面为俩字符拉取 Noto 分片（~120KB）
+            lang={otherLocale}
+            aria-label={otherLocale === "zh" ? "中文" : "English"}
+            className="inline-flex min-h-11 items-center gap-1.5 rounded-full px-2 text-sm font-medium text-primary transition-colors hover:bg-surface sm:px-3"
             style={{ fontFamily: "system-ui, sans-serif" }}
           >
+            <Icon name="export" className="size-4" />
             {otherLocale === "zh" ? "中文" : "EN"}
           </Link>
 
-          {/* 移动菜单 */}
           <button
             type="button"
             popoverTarget="mobile-nav"
-            className="inline-flex size-11 items-center justify-center border border-line text-ink lg:hidden"
+            className="inline-flex size-11 items-center justify-center rounded-full border border-line text-primary hover:bg-surface lg:hidden"
             aria-label={t("menu")}
           >
-            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="1.5" fill="none" aria-hidden="true">
-              <path d="M3 6h18M3 12h18M3 18h18" />
+            <svg viewBox="0 0 24 24" width="19" height="19" stroke="currentColor" strokeWidth="1.7" fill="none" aria-hidden="true">
+              <path d="M3 8h18M3 16h18" />
             </svg>
           </button>
         </div>
@@ -86,18 +93,21 @@ export function SiteHeader({
       <div
         id="mobile-nav"
         popover="auto"
-        className="m-0 mt-16 w-full border-b border-line bg-bg px-6 py-4 backdrop:bg-black/40"
+        className={`m-0 w-full max-w-none border-x-0 border-t-0 border-b border-line bg-bg text-ink backdrop:bg-black/40 ${showTopbar ? "mt-25 sm:mt-29" : "mt-16 sm:mt-20"}`}
       >
-        <nav aria-label={t("menu")}>
+        <nav aria-label={t("menu")} className="container-site py-4">
           <ul>
             {pages.map((p) => (
               <li key={p.href} className="border-b border-line last:border-b-0">
-                <Link href={p.href} className="block py-3.5 font-semibold text-ink">
+                <Link href={p.href} aria-current={path === p.href ? "page" : undefined} className="block py-3 font-medium hover:text-primary aria-[current=page]:text-primary">
                   {p.label}
                 </Link>
               </li>
             ))}
           </ul>
+          <button type="button" popoverTarget="mobile-nav" popoverTargetAction="hide" className="mt-2 min-h-11 px-1 text-sm font-semibold text-primary">
+            {t("close")}
+          </button>
         </nav>
       </div>
     </header>

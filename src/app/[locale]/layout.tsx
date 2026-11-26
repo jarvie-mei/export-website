@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Noto_Sans_SC } from "next/font/google";
+import { Noto_Sans_SC, Noto_Serif_SC } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -13,6 +13,14 @@ import "../globals.css";
 const notoSansSC = Noto_Sans_SC({
   subsets: [],
   variable: "--font-noto-sc",
+  display: "swap",
+  preload: false,
+});
+
+const notoSerifSC = Noto_Serif_SC({
+  subsets: [],
+  weight: "500",
+  variable: "--font-noto-serif-sc",
   display: "swap",
   preload: false,
 });
@@ -74,7 +82,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale === "zh" ? "zh-CN" : "en"}
-      className={`${fonts.classNames} ${notoSansSC.variable}`}
+      className={`${fonts.classNames} ${notoSansSC.variable} ${notoSerifSC.variable}`}
       style={cssVars}
     >
       <body className="antialiased">

@@ -7,8 +7,8 @@
     "wechat": "WeChat ID",
     "email": "Email",
     "phone": "Phone",
-    "address": "Factory address",
-    "mapAlt": "Factory location map"
+    "address": "Company address",
+    "mapAlt": "Company location map"
   },
   "product": {
     "breadcrumb": "Breadcrumb",
@@ -42,7 +42,6 @@
     "foundedLabel": "Founded",
     "employeesLabel": "Employees",
     "relatedProducts": "Related Products",
-    "catalogIntro": "{name} Product Catalogue",
-    "collectionCaption": "Textured insulated bag · Marbled paper bags"
+    "catalogIntro": "{name} Product Catalogue"
   }
 }

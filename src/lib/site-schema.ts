@@ -67,6 +67,9 @@ export const contentPackSchema = z.object({
     employees: z.string().optional(),
     about_en: z.string(),
     about_zh: z.string().optional(),
+    about_image: z.string().optional(),
+    about_image_alt_zh: z.string().optional(),
+    about_image_alt_en: z.string().optional(),
     whatsapp: z.string().optional(),
     wechat: z.string().optional(),
     email: z.string().optional(),
@@ -77,6 +80,8 @@ export const contentPackSchema = z.object({
   }),
   hero: z
     .object({
+      caption_zh: z.string().optional(),
+      caption_en: z.string().optional(),
       headline_en: z.string(),
       headline_zh: z.string().optional(),
       subline_en: z.string().optional(),

@@ -32,7 +32,7 @@ function ProductPhoto({ src, name, index }: { src: string; name: string; index: 
         type="button"
         popoverTarget={target}
         aria-label={t("zoom", { view })}
-        className="relative block aspect-square w-full cursor-zoom-in overflow-hidden border border-line bg-surface"
+        className="relative block aspect-square w-full cursor-zoom-in overflow-hidden rounded-(--radius) border border-line bg-white transition-colors hover:border-primary/60"
       >
         <Image
           src={src}
@@ -48,7 +48,7 @@ function ProductPhoto({ src, name, index }: { src: string; name: string; index: 
         popover="auto"
         role="dialog"
         aria-label={view}
-        className="m-auto w-[min(94vw,52rem)] max-h-[96dvh] overflow-auto border border-line bg-bg p-2 shadow-lg backdrop:bg-black/70"
+        className="m-auto w-[min(94vw,52rem)] max-h-[96dvh] overflow-auto rounded-(--radius) border border-line bg-white p-2 shadow-lg backdrop:bg-black/75"
       >
         <div className="flex justify-end">
           <button
@@ -106,14 +106,14 @@ export function ProductDetailPage({
   };
 
   return (
-    <article data-section="product_detail" className="section-pad bg-bg">
+    <article data-section="product_detail" className="bg-bg pt-6 pb-14 sm:pt-9 sm:pb-20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="container-site">
         {breadcrumbs.length > 0 && (
-          <nav aria-label={t("breadcrumb")} className="mb-8">
+          <nav aria-label={t("breadcrumb")} className="mb-7 border-b border-line pb-5 sm:mb-10">
             <ol className="flex flex-wrap items-center gap-2 text-sm text-muted">
               {breadcrumbs.map((b) => (
                 <li key={b.href} className="flex items-center gap-2 after:content-['/'] after:text-line">
@@ -129,11 +129,21 @@ export function ProductDetailPage({
           </nav>
         )}
 
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-          <div>
+        <div className="grid items-start gap-y-7 lg:grid-cols-[minmax(0,1.12fr)_minmax(0,0.88fr)] lg:grid-rows-[auto_1fr] lg:gap-x-14">
+          <header className="min-w-0 lg:col-start-2 lg:row-start-1 lg:pt-4">
+            <h1 className="type-display-sm text-primary">{name}</h1>
+            {(model || moq) && (
+              <dl className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+                {model && <div className="flex gap-2"><dt className="text-muted">{t("model")}</dt><dd className="tabular font-semibold">{model}</dd></div>}
+                {moq && <div className="flex gap-2"><dt className="text-muted">{t("moq")}</dt><dd className="tabular font-semibold">{moq}</dd></div>}
+              </dl>
+            )}
+          </header>
+
+          <div className="min-w-0 lg:col-start-1 lg:row-span-2 lg:row-start-1">
             <ProductPhoto src={mainImage} name={name} index={0} />
             {thumbs.length > 0 && (
-              <ul className="mt-4 grid grid-cols-4 gap-4">
+              <ul className="mt-3 grid grid-cols-4 gap-2 sm:grid-cols-5 sm:gap-3">
                 {thumbs.map((src, index) => (
                   <li key={src}>
                     <ProductPhoto src={src} name={name} index={index + 1} />
@@ -143,36 +153,20 @@ export function ProductDetailPage({
             )}
           </div>
 
-          {/* 规格面板 */}
-          <div>
-            <h1 className="type-display-sm">{name}</h1>
-            <div className="mt-3 flex flex-wrap items-baseline gap-x-6 gap-y-2">
-              {model && (
-                <p className="type-label text-muted">
-                  {t("model")} <span className="tabular text-ink">{model}</span>
-                </p>
-              )}
-              {moq && (
-                <p className="type-label text-muted">
-                  {t("moq")} <span className="tabular text-ink">{moq}</span>
-                </p>
-              )}
-            </div>
-
-            <table className="mt-8 w-full border border-line text-sm">
-              <caption className="sr-only">{t("specs")}</caption>
-              <tbody>
-                {specs.map(([k, v], i) => (
-                  <tr key={k} className={i % 2 ? "bg-surface" : "bg-bg"}>
-                    <th scope="row" className="type-label w-2/5 border-r border-line px-4 py-3 text-left font-semibold text-muted">
-                      {k}
-                    </th>
-                    <td className="tabular px-4 py-3 text-ink">{v}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-
+          <div className="min-w-0 lg:col-start-2 lg:row-start-2">
+            {specs.length > 0 && (
+              <table className="w-full border-y border-line text-left text-base">
+                <caption className="mb-3 text-left text-lg font-semibold text-ink">{t("specs")}</caption>
+                <tbody>
+                  {specs.map(([k, v]) => (
+                    <tr key={k} className="border-b border-line align-top last:border-b-0">
+                      <th scope="row" className="w-1/3 py-4 pr-4 text-sm font-medium text-muted">{k}</th>
+                      <td className="tabular py-4 text-ink">{v}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            )}
             {whatsapp && (
               <div className="mt-9">
                 <ButtonLink

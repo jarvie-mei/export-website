@@ -31,19 +31,19 @@ export function Footer({
 
   if (variant === "columns") {
     return (
-      <footer data-section="footer" className="tone-dark bg-bg">
-        <div className="container-site section-pad-tight">
-          <div className="grid grid-cols-1 gap-x-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_auto]">
-            <div>
-              <p className="text-lg font-bold text-ink">{companyName}</p>
-              {tagline && <p className="mt-3 text-sm text-muted">{tagline}</p>}
+      <footer data-section="footer" className="tone-dark border-t border-line bg-bg text-ink">
+        <div className="container-site pt-12 pb-7 md:pt-16">
+          <div className="grid gap-x-8 gap-y-9 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.3fr)_minmax(8rem,0.6fr)_minmax(0,1fr)] lg:gap-x-12">
+            <div className="sm:col-span-2 lg:col-span-1">
+              <p className="type-display-sm max-w-[18ch] text-balance">{companyName}</p>
+              {tagline && <p className="mt-4 max-w-[36ch] text-base leading-relaxed text-muted">{tagline}</p>}
             </div>
             <nav aria-label={t("sitemap")}>
-              <p className="type-label mb-4 text-muted">{t("sitemap")}</p>
+              <p className="mb-4 border-b border-line pb-3 text-sm font-semibold text-muted">{t("sitemap")}</p>
               <ul className="space-y-2">
                 {nav.map((n) => (
                   <li key={n.href}>
-                    <Link href={n.href} className="text-sm text-ink/90 hover:text-primary-bright">
+                    <Link href={n.href} className="inline-block py-0.5 text-base text-ink hover:text-primary-bright">
                       {n.label}
                     </Link>
                   </li>
@@ -51,10 +51,10 @@ export function Footer({
               </ul>
             </nav>
             {(email || whatsapp || address) && <div>
-              <p className="type-label mb-4 text-muted">{t("contact")}</p>
-              <ul className="space-y-2 text-sm">
+              <p className="mb-4 border-b border-line pb-3 text-sm font-semibold text-muted">{t("contact")}</p>
+              <ul className="space-y-3 text-base">
                 {email && <li>
-                  <a href={`mailto:${email}`} className="text-ink/90 hover:text-primary-bright">
+                  <a href={`mailto:${email}`} className="break-words text-ink underline decoration-line underline-offset-4 hover:text-primary-bright">
                     {email}
                   </a>
                 </li>}
@@ -64,17 +64,17 @@ export function Footer({
                       href={`https://wa.me/${whatsapp.replace(/[^\d]/g, "")}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-ink/90 hover:text-primary-bright"
+                      className="break-words text-ink underline decoration-line underline-offset-4 hover:text-primary-bright"
                     >
                       WhatsApp +{whatsapp.replace(/[^\d]/g, "")}
                     </a>
                   </li>
                 )}
-                {address && <li className="text-muted">{address}</li>}
+                {address && <li><address className="max-w-[35ch] text-balance text-muted not-italic">{address}</address></li>}
               </ul>
             </div>}
             {certs.length > 0 && <div>
-              <p className="type-label mb-4 text-muted">{t("compliance")}</p>
+              <p className="mb-4 border-b border-line pb-3 text-sm font-semibold text-muted">{t("compliance")}</p>
               <ul className="flex flex-wrap gap-2">
                 {certs.map((c) => (
                   <li key={c} className="type-label border border-line px-2.5 py-1.5 text-ink/80">
@@ -84,7 +84,7 @@ export function Footer({
               </ul>
             </div>}
           </div>
-          <div className="mt-10 border-t border-line pt-5">
+          <div className="mt-12 border-t border-line pt-5 md:mt-16">
             <p className="text-xs text-muted">
               © {year} {companyName}. {t("rights")}
             </p>

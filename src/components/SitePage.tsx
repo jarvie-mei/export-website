@@ -1,3 +1,4 @@
+import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
 import { SECTION_COMPONENTS } from "@/components/sections";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -58,8 +59,13 @@ function PageTitle({ pageId, locale }: { pageId: string; locale: Locale }) {
   if (!page) return null;
   return (
     <div className="border-b border-line bg-surface">
-      <div className="container-site py-12 md:py-16">
-        <h1 className="type-display-sm">{pick(page, "label", locale)}</h1>
+      <div className="container-site py-9 sm:py-12 lg:py-16">
+        <nav aria-label={locale === "zh" ? "面包屑导航" : "Breadcrumb"} className="mb-5 flex items-center gap-3 text-sm text-muted">
+          <Link href="/" className="hover:text-primary hover:underline">{locale === "zh" ? "首页" : "Home"}</Link>
+          <span aria-hidden="true" className="h-px w-5 bg-current opacity-50" />
+          <span aria-current="page">{pick(page, "label", locale)}</span>
+        </nav>
+        <h1 className="type-display text-primary">{pick(page, "label", locale)}</h1>
       </div>
     </div>
   );
