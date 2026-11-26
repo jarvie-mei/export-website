@@ -24,6 +24,12 @@
       "label_en": "Sizing Guide",
       "label_zh": "选袋指南",
       "nav": true
+    },
+    {
+      "id": "contact",
+      "label_en": "Contact Us",
+      "label_zh": "联系我们",
+      "nav": true
     }
   ],
   "sections": {
@@ -68,6 +74,12 @@
     "faq": [
       {
         "type": "faq",
+        "hints": {}
+      }
+    ],
+    "contact": [
+      {
+        "type": "contact_block",
         "hints": {}
       }
     ]

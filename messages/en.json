@@ -4,6 +4,7 @@
     "close": "Close"
   },
   "contact": {
+    "wechat": "WeChat ID",
     "email": "Email",
     "phone": "Phone",
     "address": "Factory address",

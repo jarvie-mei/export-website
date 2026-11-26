@@ -68,6 +68,7 @@ export const contentPackSchema = z.object({
     about_en: z.string(),
     about_zh: z.string().optional(),
     whatsapp: z.string().optional(),
+    wechat: z.string().optional(),
     email: z.string().optional(),
     phone: z.string().optional(),
     address_en: z.string().optional(),

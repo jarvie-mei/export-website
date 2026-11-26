@@ -205,10 +205,11 @@ export function buildSectionProps(
       };
 
     case "contact_block":
-      if (!company.whatsapp && !company.email && !company.phone && !pick(company, "address", locale)) return null;
+      if (!company.whatsapp && !company.wechat && !company.email && !company.phone && !pick(company, "address", locale)) return null;
       return {
-        heading: t("contactUs"),
+        heading: pick(company, "name", locale),
         whatsapp: company.whatsapp,
+        wechat: company.wechat,
         email: company.email,
         phone: company.phone,
         address: pick(company, "address", locale),
