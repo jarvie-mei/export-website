@@ -24,12 +24,6 @@
       "label_en": "Sizing Guide",
       "label_zh": "选袋指南",
       "nav": true
-    },
-    {
-      "id": "contact",
-      "label_en": "Contact",
-      "label_zh": "联系我们",
-      "nav": true
     }
   ],
   "sections": {
@@ -69,25 +63,11 @@
       {
         "type": "about_text",
         "hints": {}
-      },
-      {
-        "type": "cta_band",
-        "hints": {}
       }
     ],
     "faq": [
       {
         "type": "faq",
-        "hints": {}
-      },
-      {
-        "type": "cta_band",
-        "hints": {}
-      }
-    ],
-    "contact": [
-      {
-        "type": "inquiry_form",
         "hints": {}
       }
     ]

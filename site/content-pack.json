@@ -56,7 +56,7 @@
         ],
         [
           "Thermal requirements",
-          "Specify the expected time between packing and delivery"
+          "Choose a bag for the expected time between packing and delivery"
         ]
       ],
       "specs_zh": [
@@ -70,7 +70,7 @@
         ],
         [
           "保温需求",
-          "询价时请注明从打包到送达的预计时长"
+          "按从打包到送达的预计时长选择保温袋"
         ]
       ],
       "images": [
@@ -1399,9 +1399,9 @@
   "faq": [
     {
       "q_zh": "如何为叠放的餐盒选保温袋？",
-      "a_zh": "将装好餐食的餐盒加盖，按实际配送方式叠放。记录最宽处的长、宽和叠放总高度，并在询盘中注明每袋装几盒、预计配送多久。",
+      "a_zh": "将装好餐食的餐盒加盖，按实际配送方式叠放。记录最宽处的长、宽和叠放总高度，同时考虑每袋的装盒数量和配送时长。",
       "q_en": "How should I measure stacked meal boxes for an insulated bag?",
-      "a_en": "Fill and close the boxes, then stack them as they will travel. Record the length and width at the widest point and the total height. Include the number of boxes per bag and the expected delivery time in your inquiry."
+      "a_en": "Fill and close the boxes, then stack them as they will travel. Record the length and width at the widest point and the total height. Consider the number of boxes per bag and the expected delivery time."
     },
     {
       "q_zh": "咨询无腰线纸袋时，尺寸应怎样填写？",

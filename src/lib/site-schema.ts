@@ -14,7 +14,6 @@ export const SECTION_TYPES = [
   "testimonial_strip",
   "faq",
   "cta_band",
-  "inquiry_form",
   "contact_block",
   // 补充型 section：About 散文块（对标站 about 页散文是普遍结构，15 个首发组件之外的最小补充）
   "about_text",

@@ -1,23 +1,7 @@
 {
   "nav": {
     "menu": "Menu",
-    "close": "Close",
-    "getQuote": "Get a Quote"
-  },
-  "form": {
-    "defaultHeading": "Packaging inquiry",
-    "defaultLead": "Include the bag type, dimensions and order quantity. If you are unsure of the bag size, give the dimensions of the box or item it will hold.",
-    "regarding": "Regarding",
-    "name": "Your name",
-    "email": "Work email",
-    "country": "Country",
-    "quantity": "Quantity",
-    "quantityHint": "e.g. 5,000 bags",
-    "message": "Message",
-    "sending": "Sending…",
-    "submit": "Send Inquiry",
-    "ok": "Your inquiry has been submitted.",
-    "error": "Unable to submit your inquiry. Please try again later."
+    "close": "Close"
   },
   "contact": {
     "email": "Email",
@@ -30,8 +14,8 @@
     "model": "Model",
     "moq": "MOQ",
     "specs": "Specifications",
-    "zoom": "Zoom image",
-    "requestQuote": "Request Quotation",
+    "zoom": "Enlarge {view}",
+    "closeImage": "Close image",
     "whatsapp": "WhatsApp Us",
     "imageView": "{name}, product image {number}"
   },
@@ -53,9 +37,6 @@
     "buyersSay": "What Buyers Say",
     "faqHeading": "Bag types and dimensions",
     "contactUs": "Contact Us",
-    "ctaHeadline": "Discuss bag sizes and pricing",
-    "ctaButton": "Get a Quotation",
-    "getQuote": "Get a Quote",
     "viewProducts": "View Products",
     "foundedLabel": "Founded",
     "employeesLabel": "Employees",

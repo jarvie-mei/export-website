@@ -1,7 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { content, navPages, pick, type Locale } from "@/lib/site-data";
-import { buttonClass } from "@/components/ui/Button";
 
 // 站点导航。移动端菜单 = 原生 Popover（零 JS）；语言切换 = 当前路径互换 locale。
 // variant: bar = 单栏（默认）；topbar = 电话/邮箱顶栏 + 主导航栏（对标站常见版式）
@@ -69,12 +68,6 @@ export function SiteHeader({
           >
             {otherLocale === "zh" ? "中文" : "EN"}
           </Link>
-          <Link
-            href="/contact#inquiry"
-            className={`${buttonClass("primary")} hidden min-h-9 px-4 py-2 sm:inline-flex`}
-          >
-            {t("getQuote")}
-          </Link>
 
           {/* 移动菜单 */}
           <button
@@ -104,11 +97,6 @@ export function SiteHeader({
                 </Link>
               </li>
             ))}
-            <li className="py-4">
-              <Link href="/contact#inquiry" className={buttonClass("primary")}>
-                {t("getQuote")}
-              </Link>
-            </li>
           </ul>
         </nav>
       </div>

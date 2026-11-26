@@ -6,7 +6,6 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SitePage";
 import { ProductDetailPage } from "@/components/sections/ProductDetailPage";
 import { ProductGrid } from "@/components/sections/ProductGrid";
-import { InquiryForm } from "@/components/sections/InquiryForm";
 import {
   blueprint,
   content,
@@ -135,7 +134,6 @@ export default async function ProductPage({
             products={related}
           />
         )}
-        <InquiryForm productContext={{ id: product.id, name }} />
       </main>
       <SiteFooter locale={l} />
     </>

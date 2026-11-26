@@ -55,15 +55,7 @@ export function buildSectionProps(
         image: mediaUrl(hero.image),
         imageAlt: pick(hero, "headline", locale).replace(/\n/g, " · "),
         badges: hero.badges,
-        ctas: hints.variant === "split"
-          ? [{ label: t("viewProducts"), href: "/products" }]
-          :
-          (num(hints, "cta_count") ?? 2) >= 2
-            ? [
-                { label: t("getQuote"), href: "/contact#inquiry" },
-                { label: t("viewProducts"), href: "/products" },
-              ]
-            : [{ label: t("getQuote"), href: "/contact#inquiry" }],
+        ctas: [{ label: t("viewProducts"), href: "/products" }],
       };
     }
 
@@ -208,12 +200,9 @@ export function buildSectionProps(
     case "cta_band":
       return {
         variant: layout(hints).variant ?? themeDefaults.ctaVariant,
-        headline: t("ctaHeadline"),
-        cta: { label: t("ctaButton"), href: "/contact#inquiry" },
+        headline: t("productRange"),
+        cta: { label: t("viewProducts"), href: "/products" },
       };
-
-    case "inquiry_form":
-      return {};
 
     case "contact_block":
       if (!company.whatsapp && !company.email && !company.phone && !pick(company, "address", locale)) return null;

@@ -1,23 +1,7 @@
 {
   "nav": {
     "menu": "菜单",
-    "close": "关闭",
-    "getQuote": "获取报价"
-  },
-  "form": {
-    "defaultHeading": "包装袋询价",
-    "defaultLead": "请注明袋型、所需尺寸和采购数量。若还未确定袋子尺寸，可填写餐盒或商品的长、宽、高。",
-    "regarding": "咨询产品",
-    "name": "姓名",
-    "email": "工作邮箱",
-    "country": "国家/地区",
-    "quantity": "数量",
-    "quantityHint": "如 5,000 个",
-    "message": "留言",
-    "sending": "发送中…",
-    "submit": "发送询盘",
-    "ok": "询盘已提交。",
-    "error": "暂时无法提交，请稍后重试。"
+    "close": "关闭"
   },
   "contact": {
     "email": "邮箱",
@@ -30,8 +14,8 @@
     "model": "型号",
     "moq": "起订量",
     "specs": "规格参数",
-    "zoom": "放大图片",
-    "requestQuote": "索取报价",
+    "zoom": "放大{view}",
+    "closeImage": "关闭大图",
     "whatsapp": "WhatsApp 联系",
     "imageView": "{name}，第 {number} 张产品图"
   },
@@ -53,9 +37,6 @@
     "buyersSay": "客户评价",
     "faqHeading": "袋型与尺寸",
     "contactUs": "联系我们",
-    "ctaHeadline": "咨询包装袋尺寸与报价",
-    "ctaButton": "索取报价",
-    "getQuote": "获取报价",
     "viewProducts": "查看产品",
     "foundedLabel": "成立年份",
     "employeesLabel": "员工人数",

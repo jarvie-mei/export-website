@@ -20,8 +20,64 @@ export const productDetailSchema = z.object({
 });
 export type ProductDetailProps = z.infer<typeof productDetailSchema>;
 
+function ProductPhoto({ src, name, index }: { src: string; name: string; index: number }) {
+  const t = useTranslations("product");
+  const view = t("imageView", { name, number: index + 1 });
+  const target = `pdp-photo-${index + 1}`;
+  const isCover = index === 0;
+
+  return (
+    <>
+      <button
+        type="button"
+        popoverTarget={target}
+        aria-label={t("zoom", { view })}
+        className="relative block aspect-square w-full cursor-zoom-in overflow-hidden border border-line bg-surface"
+      >
+        <Image
+          src={src}
+          alt={view}
+          fill
+          preload={isCover}
+          sizes={isCover ? "(max-width: 1024px) 100vw, 50vw" : "(max-width: 640px) 24vw, 9rem"}
+          className="object-contain"
+        />
+      </button>
+      <div
+        id={target}
+        popover="auto"
+        role="dialog"
+        aria-label={view}
+        className="m-auto w-[min(94vw,52rem)] max-h-[96dvh] overflow-auto border border-line bg-bg p-2 shadow-lg backdrop:bg-black/70"
+      >
+        <div className="flex justify-end">
+          <button
+            type="button"
+            autoFocus
+            popoverTarget={target}
+            popoverTargetAction="hide"
+            className="inline-flex min-h-11 cursor-pointer items-center gap-2 px-3 font-semibold text-ink hover:bg-surface"
+          >
+            <span aria-hidden="true">×</span>
+            {t("closeImage")}
+          </button>
+        </div>
+        <button
+          type="button"
+          popoverTarget={target}
+          popoverTargetAction="hide"
+          aria-label={t("closeImage")}
+          className="relative block aspect-square max-h-[calc(96dvh-4rem)] w-full cursor-zoom-out"
+        >
+          <Image src={src} alt={view} fill sizes="(max-width: 900px) 94vw, 52rem" className="object-contain" />
+        </button>
+      </div>
+    </>
+  );
+}
+
 // 产品详情页模板（页面级，不进 SECTION_COMPONENTS）：
-// 图集（popover 放大）+ 规格表（签名件）+ 询盘 CTA + JSON-LD Product。
+// 图集（popover 放大）+ 规格表（签名件）+ JSON-LD Product。
 export function ProductDetailPage({
   name,
   model,
@@ -74,46 +130,13 @@ export function ProductDetailPage({
         )}
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-          {/* 图集：主图 popover 放大，缩略图纯展示 */}
           <div>
-            <button
-              type="button"
-              popoverTarget="pdp-zoom"
-              className="relative block aspect-square w-full cursor-zoom-in overflow-hidden border border-line bg-surface"
-              aria-label={t("zoom")}
-            >
-              <Image
-                src={mainImage}
-                alt={name}
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-contain"
-              />
-            </button>
-            <div
-              id="pdp-zoom"
-              popover="auto"
-              className="m-auto w-[min(92vw,52rem)] border border-line bg-bg p-2 shadow-[0_8px_24px_oklch(0_0_0/0.18)] backdrop:bg-black/70"
-            >
-              <div className="relative aspect-square w-full">
-                <Image src={mainImage} alt={name} fill sizes="52rem" className="object-contain" />
-              </div>
-            </div>
-
+            <ProductPhoto src={mainImage} name={name} index={0} />
             {thumbs.length > 0 && (
               <ul className="mt-4 grid grid-cols-4 gap-4">
                 {thumbs.map((src, index) => (
                   <li key={src}>
-                    <a href={src} className="relative block aspect-square cursor-zoom-in overflow-hidden border border-line bg-surface">
-                      <Image
-                        src={src}
-                        alt={t("imageView", { name, number: index + 2 })}
-                        fill
-                        sizes="(max-width: 640px) 24vw, 9rem"
-                        className="object-contain"
-                      />
-                    </a>
+                    <ProductPhoto src={src} name={name} index={index + 1} />
                   </li>
                 ))}
               </ul>
@@ -150,11 +173,8 @@ export function ProductDetailPage({
               </tbody>
             </table>
 
-            <div className="mt-9 flex flex-wrap gap-4">
-              <ButtonLink href="#inquiry" variant="primary">
-                {t("requestQuote")}
-              </ButtonLink>
-              {whatsapp && (
+            {whatsapp && (
+              <div className="mt-9">
                 <ButtonLink
                   href={`https://wa.me/${whatsapp.replace(/[^\d]/g, "")}`}
                   variant="accent"
@@ -164,8 +184,8 @@ export function ProductDetailPage({
                 >
                   {t("whatsapp")}
                 </ButtonLink>
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

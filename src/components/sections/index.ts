@@ -10,8 +10,6 @@ import { AdvantageGrid, advantageGridSchema } from "./AdvantageGrid";
 import { TestimonialStrip, testimonialStripSchema } from "./TestimonialStrip";
 import { Faq, faqSchema } from "./Faq";
 import { CtaBand, ctaBandSchema } from "./CtaBand";
-import { InquiryForm } from "./InquiryForm";
-import { inquiryFormSchema } from "./inquiry-form-schema";
 import { ContactBlock, contactBlockSchema } from "./ContactBlock";
 import { Footer, footerSchema } from "./Footer";
 import { AboutText, aboutTextSchema } from "./AboutText";
@@ -36,7 +34,6 @@ export const SECTION_COMPONENTS: Record<
   testimonial_strip: { component: TestimonialStrip, schema: testimonialStripSchema },
   faq: { component: Faq, schema: faqSchema },
   cta_band: { component: CtaBand, schema: ctaBandSchema },
-  inquiry_form: { component: InquiryForm, schema: inquiryFormSchema },
   contact_block: { component: ContactBlock, schema: contactBlockSchema },
   footer: { component: Footer, schema: footerSchema },
   about_text: { component: AboutText, schema: aboutTextSchema },
